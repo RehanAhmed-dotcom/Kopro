@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "289285851690",
+    "project_id": "kopro-cefd5",
+    "storage_bucket": "kopro-cefd5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289285851690:android:4efea23884a978682f1153",
+        "android_client_info": {
+          "package_name": "com.kopro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2zhU1GKyzTmY0IDPSJNjIZeW-R_8TRxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

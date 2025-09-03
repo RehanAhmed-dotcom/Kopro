@@ -1,0 +1,9 @@
+diff --git a/node_modules/react-native-svg/android/src/main/AndroidManifest.xml b/node_modules/react-native-svg/android/src/main/AndroidManifest.xml
+index c4e6c98..a4d26f2 100644
+--- a/node_modules/react-native-svg/android/src/main/AndroidManifest.xml
++++ b/node_modules/react-native-svg/android/src/main/AndroidManifest.xml
+@@ -1 +1,2 @@
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"/>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.horcrux.svg">
+\ No newline at end of file

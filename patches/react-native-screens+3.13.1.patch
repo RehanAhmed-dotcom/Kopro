@@ -1,0 +1,10 @@
+diff --git a/node_modules/react-native-screens/android/src/main/AndroidManifest.xml b/node_modules/react-native-screens/android/src/main/AndroidManifest.xml
+index 2de74e8..21c2eca 100644
+--- a/node_modules/react-native-screens/android/src/main/AndroidManifest.xml
++++ b/node_modules/react-native-screens/android/src/main/AndroidManifest.xml
+@@ -1,5 +1,4 @@
+ 
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+           package="com.swmansion.rnscreens">
+-
+ </manifest>
