@@ -32,6 +32,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import GradientButton from '../../Components/GradientButton';
 // import database from '@react-native-firebase/database';
 const Mate = ({navigation, route}: {navigation: any, route: any}) => {
   const items = route.params.item;
@@ -393,7 +394,7 @@ const Mate = ({navigation, route}: {navigation: any, route: any}) => {
   const [name, setname] = useState(items.groupName);
 
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       {Platform.OS != 'ios' ? (
         <StatusBar
           barStyle="light-content"
@@ -557,7 +558,7 @@ const Mate = ({navigation, route}: {navigation: any, route: any}) => {
                 }
                 </TouchableOpacity>
               ) : null} */}
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={() => {
                 _updateGroup();
                 // navigation.navigate('bottomtab');
@@ -576,7 +577,8 @@ const Mate = ({navigation, route}: {navigation: any, route: any}) => {
               <Text style={{color: Colors.main_back_color, fontSize: 16}}>
                 Update Group
               </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
+            <GradientButton title={'Update Group'} onPress={_updateGroup} />
             {/* <TouchableOpacity
 
 style={{

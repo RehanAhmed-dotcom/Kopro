@@ -15,12 +15,15 @@ import {
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
 import Colors, {images} from '../../constants';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {Notify, Notifytrue} from '../apis/index';
 import {useSelector} from 'react-redux';
 
 import styles from './style';
+
 import Loader from '../../constants/loader';
+import Header from '../../Components/Header';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const Notification = ({navigation}: {navigation: any}) => {
   const [loding, setloding] = useState(false);
@@ -71,19 +74,12 @@ const Notification = ({navigation}: {navigation: any}) => {
           : navigation.navigate('producerdetail', {dataitem: item.user_id});
       }}>
       <View style={styles.profileimg}>
-        <Image
-          source={item.image == null ? images.explore : {uri: item.image}}
-          style={styles.profile}
-          resizeMode="contain"
-        />
+        <Icon name="bell" size={15} color={'#FF00E5'} />
       </View>
       <View
         style={{marginLeft: widthPercentageToDP(3), justifyContent: 'center'}}>
         <View style={styles.seq}>
-          <Text style={[styles.name, {color: Colors.main_back_color}]}>
-            {item.name}
-          </Text>
-          <Text style={styles.tim}>{item.time}</Text>
+          <Text style={[styles.name, {color: Colors.white}]}>{item.name}</Text>
         </View>
 
         {/* <View style={styles.seq}>
@@ -91,56 +87,60 @@ const Notification = ({navigation}: {navigation: any}) => {
         </View> */}
         <Text style={styles.msg}>{item.message}</Text>
       </View>
+      <View
+        style={{height: '100%', position: 'absolute', right: 10, bottom: -10}}>
+        <Text style={styles.tim}>{item.time}</Text>
+      </View>
     </TouchableOpacity>
   );
+  const {top} = useSafeAreaInsets();
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      <SafeAreaView style={{flex:1}}>
-
-     
-      {Platform.OS != 'ios' ? (
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-      ) : null}
-      <View style={styles.root}>
-        <View style={styles.top}>
-          <Icon
-            name="arrowleft"
-            size={25}
-            color={Colors.white}
-            onPress={() => navigation.goBack()}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      <SafeAreaView style={{flex: 1, top}}>
+        {Platform.OS != 'ios' ? (
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
           />
-          <Text style={styles.home}>Notification</Text>
-          <Text></Text>
-        </View>
+        ) : null}
+        <Header title={'Notifications'} />
+        <View style={styles.root}>
+          <View style={styles.top}>
+            {/* <Icon
+              name="arrowleft"
+              size={25}
+              color={Colors.white}
+              onPress={() => navigation.goBack()}
+            /> */}
+            {/* <Text style={styles.home}>Notification</Text> */}
+            <Text></Text>
+          </View>
 
-        <View style={styles.box}>
-          <View style={styles.boxinside}>
-            {Dataary.length > 0 ? (
-              <FlatList
-                data={Dataary}
-                renderItem={Flatnotification}
-                keyExtractor={item => item.id}
-                showsVerticalScrollIndicator={false}
-              />
-            ) : (
-              <Text
-                style={{
-                  color: 'white',
-                  fontSize: 16,
-                  textAlign: 'center',
-                  marginBottom: heightPercentageToDP(2),
-                }}>
-                No Notifications
-              </Text>
-            )}
-            <Loader sts={loding} />
+          <View style={styles.box}>
+            <View style={styles.boxinside}>
+              {Dataary.length > 0 ? (
+                <FlatList
+                  data={Dataary}
+                  renderItem={Flatnotification}
+                  keyExtractor={item => item.id}
+                  showsVerticalScrollIndicator={false}
+                />
+              ) : (
+                <Text
+                  style={{
+                    color: 'white',
+                    fontSize: 16,
+                    textAlign: 'center',
+                    marginBottom: heightPercentageToDP(2),
+                  }}>
+                  No Notifications
+                </Text>
+              )}
+              <Loader sts={loding} />
+            </View>
           </View>
         </View>
-      </View>
       </SafeAreaView>
     </ImageBackground>
   );

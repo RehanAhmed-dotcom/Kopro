@@ -1,4 +1,4 @@
-import {Platform,StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -37,13 +37,13 @@ export default StyleSheet.create({
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 5
+      height: 5,
     },
     shadowRadius: 10,
     shadowOpacity: 0.5,
   },
   boxinside: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingBottom: hp(2),
   },
@@ -90,7 +90,7 @@ export default StyleSheet.create({
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 5
+      height: 5,
     },
     shadowRadius: 10,
     shadowOpacity: 0.5,

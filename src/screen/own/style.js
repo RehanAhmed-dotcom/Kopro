@@ -40,6 +40,10 @@ export default StyleSheet.create({
     marginTop: hp(4),
     width: wp(90),
     alignSelf: 'center',
+    backgroundColor: Colors.gray,
+    borderWidth: 1,
+    borderColor: 'grey',
+    borderRadius: 10,
     elevation: 20,
     shadowColor: '#000000',
     shadowOffset: {
@@ -60,18 +64,21 @@ export default StyleSheet.create({
   },
 
   pic: {
-    width: wp(90),
-    borderRadius: wp(4),
-    height: hp(20),
+    // width: wp(90),
+    width: '100%',
+    borderRadius: 10,
+    height: 127,
   },
   pics: {
-    width: wp(20),
-    height: wp(20),
-    borderRadius: wp(10),
-    borderWidth: 2,
-    borderColor: Colors.main_back_color,
+    width: 25,
+    height: 25,
+    borderRadius: 10,
+    // marginBottom: 10,
+    marginLeft: 10,
+    // borderWidth: 2,
+    // borderColor: Colors.main_back_color,
     alignSelf: 'center',
-    bottom: wp(12),
+    // bottom: wp(12),
   },
   profile: {
     zIndex: 4,
@@ -106,12 +113,16 @@ export default StyleSheet.create({
     top: hp(7),
   },
   topmain: {
-    backgroundColor: Colors.gray,
-    bottom: wp(10),
+    // backgroundColor: Colors.gray,
+    // bottom: wp(10),
+    flexDirection: 'row',
+    position: 'absolute',
+    bottom: 10,
+    alignItems: 'center',
     borderTopLeftRadius: wp(5),
     borderTopRightRadius: wp(5),
 
-    height: hp(20),
+    // height: hp(20),
   },
 
   mem: {
@@ -122,19 +133,22 @@ export default StyleSheet.create({
   },
   detail: {
     marginHorizontal: wp(5),
-    bottom: wp(10),
+    // bottom: wp(10),
   },
   detail_title: {
     fontSize: 18,
     fontFamily: 'MontserratAlternates-SemiBold',
     letterSpacing: 1,
-    color: Colors.main_back_color,
+    // marginBottom: 10,
+    color: Colors.white,
   },
   detail_text: {
     fontSize: 14,
+    marginVertical: 10,
     fontFamily: 'MontserratAlternates-Regular',
     letterSpacing: 1,
     color: 'grey',
+    width: '50%',
     marginTop: wp(2),
   },
 });

@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   SafeAreaView,
   Platform,
+  Image,
 } from 'react-native';
 import Colors, {images} from '../../constants';
 import styles from './style';
@@ -23,6 +24,7 @@ import {
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 import {verify} from '../apis/index';
+import GradientButton from '../../Components/GradientButton';
 
 const CELL_COUNT = 4;
 const Verify = ({navigation, route}: {navigation: any}) => {
@@ -69,7 +71,7 @@ const Verify = ({navigation, route}: {navigation: any}) => {
   };
 
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       {Platform.OS != 'ios' ? (
         <StatusBar
           barStyle="light-content"
@@ -85,16 +87,34 @@ const Verify = ({navigation, route}: {navigation: any}) => {
             color={Colors.white}
             onPress={() => navigation.goBack()}
           />
-          <Text style={styles.title}>Forgot Password</Text>
+          {/* <Text style={styles.title}>Forgot Password</Text> */}
           <Text></Text>
         </View>
 
         <View style={styles.box}>
           <View style={styles.boxinside}>
-            <Text style={styles.text}>
-              Enter 4 digits code that you recieved on your email
+            <View style={styles.imgplace}>
+              <Image
+                source={require('../../assets/images/HeadPhone.png')}
+                style={styles.profile}
+                resizeMode="contain"
+              />
+            </View>
+            <Text
+              style={[
+                styles.text,
+                {fontSize: 20, fontFamily: 'MontserratAlternates-Medium'},
+              ]}>
+              Verification
             </Text>
-            <SafeAreaView style={{marginVertical: hp(10)}}>
+            <Text
+              style={[
+                styles.text,
+                {marginTop: 10, color: 'grey', fontSize: 14},
+              ]}>
+              Enter the security code we sent to your Email Address
+            </Text>
+            <SafeAreaView style={{marginVertical: hp(5)}}>
               <CodeField
                 ref={ref}
                 {...props}
@@ -125,12 +145,13 @@ const Verify = ({navigation, route}: {navigation: any}) => {
               {err}
             </Text>
 
-            <TouchableOpacity
+            {/* <TouchableOpacity
               activeOpacity={0.8}
               style={styles.button}
               onPress={() => fget()}>
               <Text style={styles.login}>Verify</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
+            <GradientButton title={'Verify'} onPress={fget} />
             <Loader sts={loding} />
           </View>
         </View>

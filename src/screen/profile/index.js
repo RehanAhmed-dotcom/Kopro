@@ -29,6 +29,7 @@ import {
 import {useSelector} from 'react-redux';
 import {setLoader, userAuthorize} from '../../redux/actions';
 import {useDispatch} from 'react-redux';
+import GradientButton from '../../Components/GradientButton';
 
 const Profile = ({navigation, route}: {navigation: any}) => {
   useEffect(() => {
@@ -179,7 +180,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
   const formatss = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       <SafeAreaView style={{flex: 1}}>
         {Platform.OS != 'ios' ? (
           <StatusBar
@@ -210,14 +211,27 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                 <View style={styles.boxinside}>
                   <View style={styles.imgplace}>
                     <Image
-                      source={img == null ? images.noti : {uri: img}}
+                      source={
+                        img == null
+                          ? require('../../assets/images/HeadPhone.png')
+                          : {uri: img}
+                      }
                       style={styles.profile}
                       resizeMode="contain"
                     />
                   </View>
 
                   <Text style={styles.profiletitle}>
-                    {userData?.interest.toString()}
+                    {/* {userData?.interest.toString()} */}
+                    Complete Your Profile
+                  </Text>
+                  <Text
+                    style={[
+                      styles.profiletitle,
+                      {fontSize: 14, color: 'grey'},
+                    ]}>
+                    {/* {userData?.interest.toString()} */}
+                    Connect, create and grow in the world of music.
                   </Text>
 
                   <View style={styles.form}>
@@ -245,11 +259,13 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                     {/* <Box lab="MUSIC" val={music} onchg={txt => setmusic(txt)} /> */}
                     <Box
                       lab="ABOUT ME"
+                      place={'Write here...'}
                       val={aboutme}
                       onchg={txt => setaboutme(txt)}
                     />
                     <Box
                       lab="CREDITS"
+                      place={'Write here...'}
                       val={credit}
                       onchg={txt => setcredit(txt)}
                     />
@@ -279,10 +295,10 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                         fontSize: 16,
                         fontFamily: 'MontserratAlternates-SemiBold',
                       }}>
-                      ADD LINKS
+                      Add Social Links
                     </Text>
 
-                    <View>
+                    <View style={{marginTop: 20}}>
                       <Image
                         source={images.fac}
                         style={styles.icon}
@@ -290,6 +306,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                       />
                       <Box
                         lab="social"
+                        place={'Add Facebook link here'}
                         val={facebook}
                         onchg={txt => {
                           if (!txt.includes(' ') && !formatss.test(txt)) {
@@ -309,6 +326,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                       <Box
                         lab="social"
                         val={youtube}
+                        place={'Add Youtube link here'}
                         onchg={txt => {
                           if (!txt.includes(' ') && !formatss.test(txt)) {
                             setyoutube(txt);
@@ -327,6 +345,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                       <Box
                         lab="social"
                         val={tik}
+                        place={'Add TikTok link here'}
                         onchg={txt => {
                           if (!txt.includes(' ') && !formatss.test(txt)) {
                             settik(txt);
@@ -345,6 +364,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                       <Box
                         lab="social"
                         val={cloud}
+                        place={'Add Soundcloud link here'}
                         onchg={txt => {
                           if (!txt.includes(' ') && !formatss.test(txt)) {
                             setcloud(txt);
@@ -363,6 +383,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                       <Box
                         lab="social"
                         val={instagram}
+                        place={'Add Instagram link here'}
                         onchg={txt => {
                           if (!txt.includes(' ') && !formatss.test(txt)) {
                             setinstagram(txt);
@@ -380,6 +401,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                       <Box
                         lab="social"
                         val={twitter}
+                        place={'Add X(Twitter) link here'}
                         onchg={txt => {
                           if (!txt.includes(' ') && !formatss.test(txt)) {
                             settwitter(txt);
@@ -397,6 +419,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
 
                       <Box
                         lab="social"
+                        place={'Add Geniusap link here'}
                         val={geniusap}
                         onchg={txt => {
                           if (!txt.includes(' ') && !formatss.test(txt)) {
@@ -421,12 +444,17 @@ const Profile = ({navigation, route}: {navigation: any}) => {
               </Text>
 
               <Loader sts={loding} />
-              <TouchableOpacity
+              <GradientButton
+                title={'Continue'}
+                onPress={profileUpdate}
+                style={{width: wp(90), alignSelf: 'center'}}
+              />
+              {/* <TouchableOpacity
                 activeOpacity={0.8}
                 style={styles.button}
                 onPress={() => profileUpdate()}>
                 <Text style={styles.login}>Continue</Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
             </ScrollView>
           </KeyboardAvoidingView>
         </View>

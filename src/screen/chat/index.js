@@ -140,128 +140,127 @@ const Chat = ({navigation}: {navigation: any}) => {
     </TouchableOpacity>
   );
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      <SafeAreaView style={{flex:1}}>
-
-      {Platform.OS != 'ios' ? (
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-      ) : null}
-      <View style={styles.root}>
-        <View style={styles.top}>
-          <Icon
-            name="arrowleft"
-            size={25}
-            color={Colors.white}
-            onPress={() => navigation.goBack()}
-            style={{width: widthPercentageToDP(20)}}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      <SafeAreaView style={{flex: 1}}>
+        {Platform.OS != 'ios' ? (
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
           />
-
-          <Text style={styles.home}>Chat</Text>
-          <Text
-            style={{
-              width: widthPercentageToDP(20),
-              color: 'white',
-              fontSize: 13,
-              textAlign: 'right',
-            }}
-            onPress={() => setModalVisible(true)}>
-            All Friends
-          </Text>
-        </View>
-
-        <View style={styles.box}>
-          <View style={styles.boxinside}>
-            <FlatList
-              data={List}
-              unique={1}
-              renderItem={listUser}
-              keyExtractor={item => item.id}
+        ) : null}
+        <View style={styles.root}>
+          <View style={styles.top}>
+            <Icon
+              name="arrowleft"
+              size={25}
+              color={Colors.white}
+              onPress={() => navigation.goBack()}
+              style={{width: widthPercentageToDP(20)}}
             />
+
+            <Text style={styles.home}>Chat</Text>
+            <Text
+              style={{
+                width: widthPercentageToDP(20),
+                color: 'white',
+                fontSize: 13,
+                textAlign: 'right',
+              }}
+              onPress={() => setModalVisible(true)}>
+              All Friends
+            </Text>
+          </View>
+
+          <View style={styles.box}>
+            <View style={styles.boxinside}>
+              <FlatList
+                data={List}
+                unique={1}
+                renderItem={listUser}
+                keyExtractor={item => item.id}
+              />
+            </View>
           </View>
         </View>
-      </View>
-      {/* <Modal animationType="slide" transparent={true} visible={modalVisible}> */}
-      {modalVisible ? (
-        <View
-          style={{
-            marginTop: heightPercentageToDP(7),
-            alignItems: 'center',
-            flex: 1,
-            borderRadius: widthPercentageToDP(3),
-            position: 'absolute',
-            alignSelf: 'center',
-          }}>
+        {/* <Modal animationType="slide" transparent={true} visible={modalVisible}> */}
+        {modalVisible ? (
           <View
             style={{
-              backgroundColor: Colors.gray,
-              width: widthPercentageToDP(90),
-              height: heightPercentageToDP(75),
-              paddingVertical: widthPercentageToDP(2),
+              marginTop: heightPercentageToDP(7),
+              alignItems: 'center',
+              flex: 1,
               borderRadius: widthPercentageToDP(3),
-              paddingTop: heightPercentageToDP(4),
+              position: 'absolute',
+              alignSelf: 'center',
             }}>
             <View
               style={{
-                width: widthPercentageToDP(77),
-                alignSelf: 'center',
+                backgroundColor: Colors.gray,
+                width: widthPercentageToDP(90),
+                height: heightPercentageToDP(75),
+                paddingVertical: widthPercentageToDP(2),
+                borderRadius: widthPercentageToDP(3),
+                paddingTop: heightPercentageToDP(4),
               }}>
-              <TextInput
-                value={ser}
-                onChangeText={txt => setser(txt)}
+              <View
                 style={{
-                  borderWidth: 0.6,
-                  borderColor: Colors.white,
-                  borderRadius: widthPercentageToDP(3),
-                  paddingHorizontal: widthPercentageToDP(5),
-                  color: 'white',
-                  height: heightPercentageToDP(6),
-                }}
-                placeholder="To : "
-                placeholderTextColor="white"
-                onBlur={() => UserList()}
-              />
-              <TouchableOpacity
-                style={{
-                  position: 'absolute',
-                  right: 0,
-                  paddingHorizontal: widthPercentageToDP(4),
-                  paddingVertical: heightPercentageToDP(1.5),
-                }}
-                onPress={() => {
-                  setser(''), UserList();
+                  width: widthPercentageToDP(77),
+                  alignSelf: 'center',
                 }}>
-                <Icon3 name="close" size={20} color="white" />
-              </TouchableOpacity>
+                <TextInput
+                  value={ser}
+                  onChangeText={txt => setser(txt)}
+                  style={{
+                    borderWidth: 0.6,
+                    borderColor: Colors.white,
+                    borderRadius: widthPercentageToDP(3),
+                    paddingHorizontal: widthPercentageToDP(5),
+                    color: 'white',
+                    height: heightPercentageToDP(6),
+                  }}
+                  placeholder="To : "
+                  placeholderTextColor="white"
+                  onBlur={() => UserList()}
+                />
+                <TouchableOpacity
+                  style={{
+                    position: 'absolute',
+                    right: 0,
+                    paddingHorizontal: widthPercentageToDP(4),
+                    paddingVertical: heightPercentageToDP(1.5),
+                  }}
+                  onPress={() => {
+                    setser(''), UserList();
+                  }}>
+                  <Icon3 name="close" size={20} color="white" />
+                </TouchableOpacity>
+              </View>
+              <FlatList
+                data={Dataary}
+                renderItem={frien}
+                // keyExtractor={item => item.id}
+              />
             </View>
-            <FlatList
-              data={Dataary}
-              renderItem={frien}
-              // keyExtractor={item => item.id}
-            />
+            <TouchableOpacity
+              style={{
+                width: widthPercentageToDP(8),
+                height: widthPercentageToDP(8),
+                borderRadius: widthPercentageToDP(4),
+                backgroundColor: 'red',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: 'absolute',
+                right: 0,
+                // marginRight: widthPercentageToDP(1),
+                top: heightPercentageToDP(-1),
+              }}
+              onPress={() => setModalVisible(false)}>
+              <Icon name="close" size={18} color={Colors.white} />
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            style={{
-              width: widthPercentageToDP(8),
-              height: widthPercentageToDP(8),
-              borderRadius: widthPercentageToDP(4),
-              backgroundColor: 'red',
-              justifyContent: 'center',
-              alignItems: 'center',
-              position: 'absolute',
-              right: 0,
-              // marginRight: widthPercentageToDP(1),
-              top: heightPercentageToDP(-1),
-            }}
-            onPress={() => setModalVisible(false)}>
-            <Icon name="close" size={18} color={Colors.white} />
-          </TouchableOpacity>
-        </View>
-      ) : null}
-      {/* </Modal> */}
+        ) : null}
+        {/* </Modal> */}
       </SafeAreaView>
     </ImageBackground>
   );

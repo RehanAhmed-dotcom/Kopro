@@ -62,30 +62,49 @@ const Own = ({navigation}: {navigation: any}) => {
       activeOpacity={1}
       onPress={() => {
         navigation.navigate('labchat', {item});
+        // console.log('item', item);
       }}>
       <View style={styles.boxinside}>
-        <Image
-          source={item.cover == '' ? images.grp : {uri: item.cover}}
-          style={styles.pic}
-          resizeMode="cover"
-        />
-
-        <View style={styles.topmain}>
+        <View style={{height: 127}}>
           <Image
-            source={
-              item.groupImage == '' ? images.person : {uri: item.groupImage}
-            }
-            style={styles.pics}
+            source={item.cover == '' ? images.grp : {uri: item.cover}}
+            style={styles.pic}
             resizeMode="cover"
           />
+          <View style={styles.topmain}>
+            <Image
+              source={
+                item.groupImage == '' ? images.person : {uri: item.groupImage}
+              }
+              style={styles.pics}
+              resizeMode="cover"
+            />
 
-          <View style={styles.detail}>
-            <Text style={styles.detail_title}>{item.groupName}</Text>
+            <View style={styles.detail}>
+              <Text style={styles.detail_title}>{item.groupName}</Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            paddingHorizontal: 10,
+            justifyContent: 'space-between',
+          }}>
+          <Text
+            style={styles.detail_text}
+            numberOfLines={6}
+            ellipsizeMode="tail">
+            {item.groupDesc}
+          </Text>
+          <View>
             <Text
-              style={styles.detail_text}
-              numberOfLines={6}
-              ellipsizeMode="tail">
-              {item.groupDesc}
+              style={{
+                marginVertical: 10,
+                color: 'white',
+                fontFamily: 'MontserratAlternates-Medium',
+              }}>
+              Group Type: {item.groupType}
             </Text>
           </View>
         </View>
@@ -125,41 +144,45 @@ const Own = ({navigation}: {navigation: any}) => {
   };
 
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      <SafeAreaView style={{flex:1}}>
-      {Platform.OS != 'ios' ? (
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-      ) : null}
-      <View style={styles.root}>
-        <View style={styles.top}>
-          <Icon
-            name="arrowleft"
-            size={25}
-            color={Colors.white}
-            onPress={() => navigation.goBack()}
-            style={{width: wp(18)}}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      <SafeAreaView style={{flex: 1}}>
+        {Platform.OS != 'ios' ? (
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
           />
-          <Text style={styles.title}>My Groups</Text>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate('groups');
-            }}>
-            <Text style={styles.gitd}>Create New{'\n'}Group</Text>
-          </TouchableOpacity>
+        ) : null}
+        <View style={styles.root}>
+          <View style={styles.top}>
+            <Icon
+              name="arrowleft"
+              size={25}
+              color={Colors.white}
+              onPress={() => navigation.goBack()}
+              style={{width: wp(18)}}
+            />
+            <Text style={styles.title}>Groups</Text>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('groups');
+              }}>
+              <Image
+                style={{width: 20, height: 20}}
+                resizeMode="contain"
+                source={require('../../assets/images/CreateGroup.png')}
+              />
+            </TouchableOpacity>
+          </View>
+
+          <FlatList
+            data={arydata}
+            renderItem={renderItem}
+            keyExtractor={item => item.id}
+          />
+
+          <Loader sts={loding} />
         </View>
-
-        <FlatList
-          data={arydata}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-        />
-
-        <Loader sts={loding} />
-      </View>
       </SafeAreaView>
     </ImageBackground>
   );

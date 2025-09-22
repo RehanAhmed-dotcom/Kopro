@@ -1,4 +1,4 @@
-import {Platform,StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -12,7 +12,7 @@ export default StyleSheet.create({
     flex: 1,
     resizeMode: 'contain',
     width: wp(100),
-    height: hp(100),
+    // height: hp(100),
   },
 
   top: {
@@ -46,7 +46,7 @@ export default StyleSheet.create({
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 5
+      height: 5,
     },
     shadowRadius: 10,
     shadowOpacity: 0.5,
@@ -61,7 +61,7 @@ export default StyleSheet.create({
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 5
+      height: 5,
     },
     shadowRadius: 10,
     shadowOpacity: 0.5,
@@ -90,13 +90,13 @@ export default StyleSheet.create({
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 5
+      height: 5,
     },
     shadowRadius: 10,
     shadowOpacity: 0.5,
   },
   boxinside: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingBottom: hp(2),
   },
@@ -151,14 +151,14 @@ export default StyleSheet.create({
     position: 'absolute',
     zIndex: 1,
     borderWidth: 3,
-    borderColor: Colors.main_back_color,
-    borderRadius: wp(10),
+    // borderColor: Colors.main_back_color,
+    borderRadius: 10,
     opacity: 0.7,
   },
   cover: {
     position: 'absolute',
     alignSelf: 'center',
-    top: hp(7),
+    top: hp(5),
   },
   coverText: {
     fontSize: 18,

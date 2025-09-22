@@ -25,7 +25,7 @@ const Friends = ({navigation}) => {
     <ImageBackground
       resizeMode="cover"
       style={styles.headerImage}
-      source={images.back2}>
+      source={images.back}>
       {Platform.OS != 'ios' ? (
         <StatusBar
           barStyle="light-content"
@@ -47,19 +47,24 @@ const Friends = ({navigation}) => {
         <Tab.Navigator
           screenOptions={{
             tabBarIndicatorStyle: {
-              backgroundColor: 'white',
+              backgroundColor: 'transparent',
             },
             tabBarLabelStyle: {
-              fontSize: 14,
+              fontSize: 12,
               fontFamily: 'MontserratAlternates-Medium',
             },
             tabBarActiveTintColor: 'white',
             tabBarInactiveTintColor: 'gray',
-            tabBarItemStyle: {width: wp(100 / 3)},
+            tabBarItemStyle: {width: 120},
             tabBarStyle: {
-              backgroundColor: Colors.main_back_color,
-              borderWidth: 0,
+              backgroundColor: '#1A0B19',
+              borderWidth: 1,
+              marginHorizontal: 20,
+              borderColor: Colors.main_back_color,
               borderTopRightRadius: wp(5),
+              borderBottomRightRadius: 5,
+              borderBottomLeftRadius: 5,
+
               borderTopLeftRadius: wp(5),
             },
           }}>

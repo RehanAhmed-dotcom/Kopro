@@ -1,4 +1,4 @@
-import {Platform,StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -12,7 +12,19 @@ export default StyleSheet.create({
     flex: 1,
     resizeMode: 'contain',
   },
-
+  profile: {
+    width: 215,
+    height: 180,
+    // borderWidth: 1,
+    borderColor: 'white',
+    // borderRadius: wp(12.5),
+  },
+  imgplace: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    // alignItems: 'flex-start',
+    bottom: wp(14),
+  },
   top: {
     flexDirection: 'row',
     alignContent: 'center',
@@ -22,7 +34,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily:'MontserratAlternates-SemiBold',
+    fontFamily: 'MontserratAlternates-SemiBold',
     letterSpacing: 1,
     color: Colors.white,
   },
@@ -32,11 +44,11 @@ export default StyleSheet.create({
     marginTop: hp(10),
   },
   boxinside: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingTop: hp(2),
     paddingBottom: hp(2),
-    paddingHorizontal: wp(5),
+    // paddingHorizontal: wp(5),
     shadowColor: Colors.gray,
     shadowOffset: {
       width: 0,
@@ -48,17 +60,16 @@ export default StyleSheet.create({
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 5
+      height: 5,
     },
     shadowRadius: 10,
     shadowOpacity: 0.5,
   },
   text: {
     fontSize: 16,
-    fontFamily:'MontserratAlternates-Medium',
+    fontFamily: 'MontserratAlternates-Medium',
     color: Colors.white,
-    textAlign:'center'
-
+    textAlign: 'center',
   },
   button: {
     backgroundColor: Colors.white,
@@ -71,8 +82,8 @@ export default StyleSheet.create({
   },
   login: {
     fontSize: 18,
-    fontFamily:'MontserratAlternates-SemiBold',
-    
+    fontFamily: 'MontserratAlternates-SemiBold',
+
     color: Colors.main_back_color,
     fontWeight: '600',
     letterSpacing: 1,

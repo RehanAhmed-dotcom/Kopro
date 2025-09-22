@@ -13,6 +13,7 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 import Colors, {images} from '../../constants';
+import SendIcon from 'react-native-vector-icons/FontAwesome';
 import styles from './style';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/Entypo';
@@ -198,33 +199,35 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
             resizeMode="contain"
             style={{width: wp(48), height: wp(70)}}
           />
-          <Text style={[styles.tim, {color: 'black'}]}>
+          {/* <Text style={[styles.tim, {color: 'black'}]}>
             {moment(item.date).format('hh:mm A')}
-          </Text>
+          </Text> */}
         </View>
       ) : (
-        <View
-          style={{
-            width: wp(70),
-            paddingLeft: wp(4),
-            paddingRight: wp(2),
-            paddingVertical: hp(1),
-            backgroundColor:
-              item.sendBy == userData?.id ? Colors.main_back_color : 'white',
-            borderRadius: wp(2),
-            alignSelf: item.sendBy == userData?.id ? 'flex-end' : 'flex-start',
-            flexWrap: 'nowrap',
-            marginBottom: hp(1),
-          }}>
-          <Text
+        <>
+          <View
             style={{
-              fontSize: 14,
-              fontFamily: 'MontserratAlternates-Regular',
-              color: item.sendBy == userData?.id ? 'white' : 'black',
+              width: wp(70),
+              paddingLeft: wp(4),
+              paddingRight: wp(2),
+              paddingVertical: hp(1),
+              backgroundColor:
+                item.sendBy == userData?.id ? '#7D0776' : '#1F1F1F',
+              borderRadius: wp(2),
+              alignSelf:
+                item.sendBy == userData?.id ? 'flex-end' : 'flex-start',
+              flexWrap: 'nowrap',
+              marginBottom: hp(1),
             }}>
-            {item.msg}
-          </Text>
-          <Text
+            <Text
+              style={{
+                fontSize: 14,
+                fontFamily: 'MontserratAlternates-Regular',
+                color: 'white',
+              }}>
+              {item.msg}
+            </Text>
+            {/* <Text
             style={{
               alignSelf: 'flex-end',
               fontSize: 10,
@@ -232,13 +235,15 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
               color: 'white',
             }}>
             {moment(item.date).format('hh:mm A')}
-          </Text>
-        </View>
+          </Text> */}
+          </View>
+          {/* </View> */}
+        </>
       )}
     </View>
   );
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       {Platform.OS != 'ios' ? (
         <StatusBar
           barStyle="light-content"
@@ -339,7 +344,7 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
               marginTop: wp(1),
               marginBottom: key ? (Platform.OS == 'ios' ? hp(7) : 0) : 0,
             }}>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={() => selectimg()}
               style={{
                 width: wp(11),
@@ -350,12 +355,12 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
                 alignItems: 'center',
               }}>
               <Icon name="picture" size={20} color={Colors.white} />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TextInput
               style={styles.input}
               onChangeText={text => setMessage(text)}
               value={message}
-              placeholderTextColor="white"
+              placeholderTextColor="#4D4C4E"
               placeholder="Write your message here..."
               editable={message.slice(-4) == '.jpg' ? false : true}
             />
@@ -372,15 +377,11 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
                 width: wp(11),
                 height: wp(11),
                 borderRadius: wp(15),
-                backgroundColor: 'grey',
+                // backgroundColor: 'grey',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Image
-                source={images.chaticon}
-                style={styles.chaticon}
-                resizeMode="contain"
-              />
+              <SendIcon name="send" size={20} color={'#7D0776'} />
             </TouchableOpacity>
           </View>
         </Wrapper>

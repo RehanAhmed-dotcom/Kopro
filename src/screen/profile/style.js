@@ -44,19 +44,19 @@ export default StyleSheet.create({
     // marginBottom:hp(10)
   },
   boxinside: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
   },
   form: {
-    marginHorizontal: wp(5),
+    // marginHorizontal: wp(5),
     bottom: wp(10),
   },
   profile: {
     width: wp(25),
     height: wp(25),
-    borderWidth: 1,
+    // borderWidth: 1,
     borderColor: 'white',
-    borderRadius: wp(12.5),
+    // borderRadius: wp(12.5),
   },
   imgplace: {
     flexDirection: 'row',
@@ -70,10 +70,10 @@ export default StyleSheet.create({
   },
 
   icon: {
-    width: wp(10),
-    height: wp(10),
+    width: wp(8),
+    height: wp(8),
     position: 'absolute',
-    top: wp(10),
+    top: 22,
     left: wp(4),
   },
   button: {

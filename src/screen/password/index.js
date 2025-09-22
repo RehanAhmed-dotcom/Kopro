@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ToastAndroid,
   Platform,
+  ScrollView,
 } from 'react-native';
 import Colors, {images} from '../../constants';
 import styles from './style';
@@ -18,6 +19,8 @@ import {
 } from 'react-native-responsive-screen';
 import {passwordapi} from '../apis/index';
 import Loader from '../../constants/loader';
+import {Image} from 'react-native';
+import GradientButton from '../../Components/GradientButton';
 
 const Password = ({navigation, route}: {navigation: any}) => {
   let mail = route.params.em;
@@ -68,7 +71,7 @@ const Password = ({navigation, route}: {navigation: any}) => {
   };
 
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       {Platform.OS != 'ios' ? (
         <StatusBar
           barStyle="light-content"
@@ -84,45 +87,67 @@ const Password = ({navigation, route}: {navigation: any}) => {
             color={Colors.white}
             onPress={() => navigation.goBack()}
           />
-          <Text style={styles.title}>Forgot Password</Text>
+          {/* <Text style={styles.title}>Forgot Password</Text> */}
           <Text></Text>
         </View>
+        <ScrollView>
+          <View style={styles.box}>
+            <View style={styles.boxinside}>
+              <View style={styles.imgplace}>
+                <Image
+                  source={require('../../assets/images/HeadPhone.png')}
+                  style={styles.profile}
+                  resizeMode="contain"
+                />
+              </View>
+              <Text
+                style={[
+                  styles.text,
+                  {fontSize: 20, fontFamily: 'MontserratAlternates-Medium'},
+                ]}>
+                Verification
+              </Text>
+              <Text
+                style={[
+                  styles.text,
+                  {marginTop: 10, color: 'grey', fontSize: 14},
+                ]}>
+                Enter the security code we sent to your Email Address
+              </Text>
+              <View style={{marginVertical: hp(5)}}>
+                <Box
+                  lab="New Password"
+                  val={password}
+                  onchg={txt => setpassword(txt)}
+                />
+                <Box
+                  lab="Confirm New Password"
+                  val={conpass}
+                  onchg={txt => setconpass(txt)}
+                />
+              </View>
 
-        <View style={styles.box}>
-          <View style={styles.boxinside}>
-            <Text style={styles.text}>Please enter your new password</Text>
-            <View style={{marginVertical: hp(10)}}>
-              <Box
-                lab="New Password"
-                val={password}
-                onchg={txt => setpassword(txt)}
-              />
-              <Box
-                lab="Confirm New Password"
-                val={conpass}
-                onchg={txt => setconpass(txt)}
-              />
+              <Loader sts={loding} />
+              <Text
+                style={{
+                  alignSelf: 'center',
+                  color: 'red',
+                  fontSize: 13,
+                  fontFamily: 'MontserratAlternates-SemiBold',
+                }}>
+                {err}
+              </Text>
+
+              {/* <TouchableOpacity
+                activeOpacity={0.8}
+                style={styles.button}
+                onPress={() => reset()}>
+                <Text style={styles.login}>Update</Text>
+              </TouchableOpacity> */}
+              <GradientButton title={'Update'} onPress={reset} />
             </View>
-
-            <Loader sts={loding} />
-            <Text
-              style={{
-                alignSelf: 'center',
-                color: 'red',
-                fontSize: 13,
-                fontFamily: 'MontserratAlternates-SemiBold',
-              }}>
-              {err}
-            </Text>
-
-            <TouchableOpacity
-              activeOpacity={0.8}
-              style={styles.button}
-              onPress={() => reset()}>
-              <Text style={styles.login}>Update</Text>
-            </TouchableOpacity>
           </View>
-        </View>
+        </ScrollView>
       </View>
     </ImageBackground>
   );

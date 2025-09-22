@@ -81,22 +81,26 @@ export default Following;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: Colors.gray,
+    backgroundColor: 'black',
   },
   mainBox: {
     flexDirection: 'row',
     alignItem: 'center',
     marginTop: wp(4),
+    backgroundColor: Colors.gray,
     marginHorizontal: wp(5),
     borderBottomWidth: 0.7,
-    borderBottomColor: 'white',
+    // borderBottomColor: 'white',
+    borderRadius: 25,
     paddingBottom: wp(2),
+    padding: 10,
   },
   main: {
     flexDirection: 'column',
     alignItem: 'center',
     // justifyContent: 'center',
     // marginRight: wp(5),
+    // backgroundColor: 'red',
     justifyContent: 'center',
     width: wp(60),
     height: wp(20),
@@ -110,12 +114,14 @@ const styles = StyleSheet.create({
   },
 
   img: {
-    width: wp(20),
+    width: 50,
     height: wp(20),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   profile: {
-    width: wp(20),
-    height: wp(20),
+    width: 50,
+    height: 50,
     // alignSelf: 'center',
     borderRadius: wp(10),
     // marginTop:wp(5)

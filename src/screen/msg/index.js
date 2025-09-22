@@ -23,6 +23,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import SendIcon from 'react-native-vector-icons/FontAwesome';
 import ImagePicker from 'react-native-image-crop-picker';
 import {Image_set, GetNotiGroup} from '../apis/index';
 
@@ -116,25 +117,50 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
   const viewMessages = ({item}) => (
     <View>
       {item.recievedBy == userData?.email.replace(/[^a-zA-Z0-9 ]/g, '') ? (
-        item?.msg?.slice(-4) == '.jpg' ? (
-          <View style={styles.textbox}>
-            <Image
-              source={{uri: item.msg}}
-              resizeMode="contain"
-              style={{width: wp(48), height: wp(70)}}
-            />
-            <Text style={[styles.tim, {color: 'black'}]}>
-              {moment(item.date).format('hh:mm A')}
-            </Text>
-          </View>
-        ) : (
-          <View style={styles.textbox}>
-            <Text style={[styles.msg, {color: 'black'}]}>{item.msg}</Text>
-            <Text style={[styles.tim, {color: 'black'}]}>
-              {moment(item.date).format('hh:mm A')}
-            </Text>
-          </View>
-        )
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <Image
+            source={guestData.image ? {uri: guestData.image} : images.p4}
+            style={[
+              styles.profile,
+              {
+                marginRight: 10,
+                marginBottom: hp(2),
+                height: 50,
+                width: 50,
+                borderRadius: 20,
+              },
+            ]}
+            resizeMode="contain"
+          />
+          {item?.msg?.slice(-4) == '.jpg' ? (
+            <View style={styles.textbox}>
+              <Image
+                source={{uri: item.msg}}
+                resizeMode="contain"
+                style={{width: wp(48), height: wp(70)}}
+              />
+              <Text style={[styles.tim, {color: 'black'}]}>
+                {moment(item.date).format('hh:mm A')}
+              </Text>
+            </View>
+          ) : (
+            <View style={styles.textbox}>
+              <Text
+                style={[
+                  styles.msg,
+                  {
+                    color: '#BABABA',
+                    fontFamily: 'MontserratAlternates-SemiBold',
+                  },
+                ]}>
+                {item.msg}
+              </Text>
+              {/* <Text style={[styles.tim, {color: 'black'}]}>
+                {moment(item.date).format('hh:mm A')}
+              </Text> */}
+            </View>
+          )}
+        </View>
       ) : null}
       {item.sendBy == userData?.email.replace(/[^a-zA-Z0-9 ]/g, '') ? (
         item?.msg?.slice(-4) == '.jpg' ? (
@@ -162,15 +188,15 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
               styles.textbox,
               {
                 marginTop: hp(2),
-                backgroundColor: Colors.main_back_color,
+                backgroundColor: '#7D0776',
                 alignSelf: 'flex-end',
               },
             ]}
             onLongPress={() => deleteMesg(item)}>
             <Text style={[styles.msg, {color: 'white'}]}>{item.msg}</Text>
-            <Text style={[styles.tim, {color: 'white'}]}>
+            {/* <Text style={[styles.tim, {color: 'white'}]}>
               {moment(item.date).format('hh:mm A')}
-            </Text>
+            </Text> */}
           </TouchableOpacity>
         )
       ) : null}
@@ -412,115 +438,116 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
     setkey(false);
   });
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      <SafeAreaView style={{flex:1}}>
-      {Platform.OS != 'ios' ? (
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-      ) : null}
-      <View style={styles.root}>
-        <View style={styles.top}>
-          <Icon
-            name="arrowleft"
-            size={25}
-            color={Colors.white}
-            onPress={() => navigation.goBack()}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      <SafeAreaView style={{flex: 1}}>
+        {Platform.OS != 'ios' ? (
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
           />
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              marginRight: wp(30),
-            }}>
-            <Image
-              source={guestData.image ? {uri: guestData.image} : images.p4}
-              style={styles.profile}
-              resizeMode="contain"
+        ) : null}
+        <View style={styles.root}>
+          <View style={styles.top}>
+            <Icon
+              name="arrowleft"
+              size={25}
+              color={Colors.white}
+              onPress={() => navigation.goBack()}
             />
-            <View style={{flexDirection: 'column', marginLeft: wp(3)}}>
-              <Text
-                style={{
-                  fontSize: 16,
-                  fontFamily: 'MontserratAlternates-SemiBold',
-                  color: 'white',
-
-                  letterSpacing: 1,
-                }}>
-                {`${guestData.firstname} ${guestData.lastname}`}
-              </Text>
-            </View>
-          </View>
-
-          <Text></Text>
-        </View>
-        <Wrapper style={{flex: 1}} behavior="padding">
-          <View style={styles.box}>
-            <View style={styles.boxinside}>
-              <FlatList inverted data={messages} renderItem={viewMessages} />
-            </View>
-          </View>
-          {/* chat box---------------------  */}
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              width: wp(88),
-              alignSelf: 'center',
-              marginTop: wp(1),
-              marginBottom: key ? (Platform.OS == 'ios' ? hp(7) : 0) : 0,
-            }}>
-            <TouchableOpacity
-              onPress={() => selectimg()}
+            <View
               style={{
-                width: wp(12),
-                height: wp(12),
-                borderRadius: wp(15),
-                backgroundColor: 'grey',
-                justifyContent: 'center',
+                flexDirection: 'row',
                 alignItems: 'center',
-              }}>
-              <Icon name="picture" size={20} color={Colors.white} />
-            </TouchableOpacity>
-
-            <TextInput
-              style={styles.input}
-              onChangeText={text => setMessage(text)}
-              value={message}
-              placeholder={
-                fun()
-                  ? 'Write your message here...'
-                  : 'Send request for conversation'
-              }
-              placeholderTextColor="white"
-              editable={message.slice(-4) == '.jpg' ? false : true}
-            />
-
-            <TouchableOpacity
-              onPress={() => handleSend()}
-              // onPress={() => _handlePushNotification()}
-              style={{
-                width: wp(12),
-                height: wp(12),
-                borderRadius: wp(15),
-                backgroundColor: 'grey',
-                justifyContent: 'center',
-                alignItems: 'center',
+                // marginRight: wp(30),
               }}>
               <Image
-                source={images.chaticon}
-                style={styles.chaticon}
+                source={guestData.image ? {uri: guestData.image} : images.p4}
+                style={styles.profile}
                 resizeMode="contain"
               />
-            </TouchableOpacity>
-          </View>
-        </Wrapper>
+              <View style={{flexDirection: 'column', marginLeft: wp(3)}}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'MontserratAlternates-SemiBold',
+                    color: 'white',
 
-        {/* chatbox end-------------------- */}
-      </View>
+                    letterSpacing: 1,
+                  }}>
+                  {`${guestData.firstname} ${guestData.lastname}`}
+                </Text>
+              </View>
+            </View>
+
+            <Text></Text>
+          </View>
+          <Wrapper style={{flex: 1}} behavior="padding">
+            <View style={styles.box}>
+              <View style={styles.boxinside}>
+                <FlatList inverted data={messages} renderItem={viewMessages} />
+              </View>
+            </View>
+            {/* chat box---------------------  */}
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                width: wp(88),
+                alignSelf: 'center',
+                marginTop: wp(1),
+                marginBottom: key ? (Platform.OS == 'ios' ? hp(7) : 0) : 0,
+              }}>
+              {/* <TouchableOpacity
+                onPress={() => selectimg()}
+                style={{
+                  width: wp(12),
+                  height: wp(12),
+                  borderRadius: wp(15),
+                  backgroundColor: 'grey',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Icon name="picture" size={20} color={Colors.white} />
+              </TouchableOpacity> */}
+
+              <TextInput
+                style={styles.input}
+                onChangeText={text => setMessage(text)}
+                value={message}
+                placeholder={
+                  fun()
+                    ? 'Write your message here...'
+                    : 'Send request for conversation'
+                }
+                placeholderTextColor="#4D4C4E"
+                editable={message.slice(-4) == '.jpg' ? false : true}
+              />
+
+              <TouchableOpacity
+                onPress={() => handleSend()}
+                // onPress={() => _handlePushNotification()}
+                style={{
+                  width: wp(12),
+                  height: wp(12),
+                  borderRadius: wp(15),
+                  // backgroundColor: '#1F1F1F',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                {/* <Image
+                  source={images.chaticon}
+                  style={styles.chaticon}
+                  resizeMode="contain"
+                /> */}
+                <SendIcon name="send" size={20} color={'#7D0776'} />
+              </TouchableOpacity>
+            </View>
+          </Wrapper>
+
+          {/* chatbox end-------------------- */}
+        </View>
       </SafeAreaView>
     </ImageBackground>
   );

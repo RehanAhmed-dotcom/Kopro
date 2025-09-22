@@ -36,11 +36,26 @@ export default StyleSheet.create({
     alignSelf: 'center',
     tintColor: 'white',
   },
+  actionButton: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: '#333',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  musicButton: {
+    backgroundColor: '#ff0eea',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+  },
   profile: {
-    width: wp(80),
-    height: wp(80),
+    width: wp(90),
+    height: 435,
+
     alignSelf: 'center',
-    borderRadius: wp(4),
+    borderRadius: 10,
   },
   top: {
     flexDirection: 'row',
@@ -58,7 +73,7 @@ export default StyleSheet.create({
   },
   box: {
     marginHorizontal: wp(5),
-    marginBottom: hp(3),
+    marginBottom: hp(1),
   },
   social: {
     flexDirection: 'row',
@@ -87,17 +102,17 @@ export default StyleSheet.create({
     resizeMode: 'contain',
   },
   boxinside: {
-    backgroundColor: Colors.gray,
-    borderRadius: wp(4),
+    // backgroundColor: Colors.gray,
+    // borderRadius: wp(4),
     paddingTop: hp(2),
-    paddingBottom: hp(2),
+    // paddingBottom: hp(2),
     paddingHorizontal: wp(5),
   },
   aboutbox: {
-    marginHorizontal: wp(5),
+    // marginHorizontal: wp(5),
   },
   aboutboxinside: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingTop: hp(1),
     paddingBottom: hp(4),
@@ -126,12 +141,12 @@ export default StyleSheet.create({
     bottom: wp(5),
   },
   name: {
-    color: Colors.main_back_color,
-    fontSize: 33,
+    color: Colors.white,
+    fontSize: 24,
     fontFamily: 'MontserratAlternates-SemiBold',
 
     letterSpacing: 1,
-    textAlign: 'center',
+    // textAlign: 'center',
   },
   detail: {
     color: 'white',
@@ -156,7 +171,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.5,
   },
   button: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: 16,
     width: wp(90),
     height: wp(14),
@@ -167,9 +182,10 @@ export default StyleSheet.create({
     marginBottom: hp(2),
   },
   login: {
-    fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
-    color: Colors.white,
+    fontSize: 14,
+    marginLeft: 5,
+    fontFamily: 'MontserratAlternates-Regular',
+    color: 'grey',
     fontWeight: 'bold',
     letterSpacing: 1,
     marginRight: wp(2),

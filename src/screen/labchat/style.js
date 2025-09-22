@@ -39,7 +39,7 @@ export default StyleSheet.create({
   },
   boxinside: {
     flex: 1,
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingTop: hp(2),
     paddingBottom: hp(2),
@@ -72,10 +72,10 @@ export default StyleSheet.create({
     padding: 10,
     fontSize: 14,
     fontFamily: 'MontserratAlternates-Regular',
-    backgroundColor: 'grey',
+    backgroundColor: '#1F1F1F',
     borderRadius: 20,
     paddingLeft: wp(3),
-    width: wp(62),
+    width: wp(75),
     color: 'white',
   },
   chaticon: {

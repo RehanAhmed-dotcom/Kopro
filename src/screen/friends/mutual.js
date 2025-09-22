@@ -50,6 +50,7 @@ const Mutual = ({navigation}) => {
     <TouchableOpacity
       style={styles.mainBox}
       onPress={() => {
+        // console.log('item', item);
         navigation.navigate('producerdetail', {dataitem: item.id});
       }}>
       <View style={styles.img}>
@@ -60,10 +61,21 @@ const Mutual = ({navigation}) => {
         />
       </View>
       <View style={styles.main}>
+        <Text
+          style={{
+            fontSize: 8,
+            color: '#7D0776',
+            position: 'absolute',
+            right: 0,
+            top: 30,
+          }}>
+          Mutual Friend
+        </Text>
         <Text style={styles.text}>{item.firstname + ' ' + item.lastname}</Text>
         <Text style={styles.text1}>
-          {item.mutualfriend}{' '}
-          {item.mutualfriend <= 1 ? 'Mutual Friend' : 'Mutual Friends'}
+          {/* {item.mutualfriend}{' '}
+          {item.mutualfriend <= 1 ? 'Mutual Friend' : 'Mutual Friends'} */}
+          {item?.about_me}
         </Text>
       </View>
     </TouchableOpacity>
@@ -85,15 +97,19 @@ export default Mutual;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: Colors.gray,
+    backgroundColor: 'black',
   },
   mainBox: {
     flexDirection: 'row',
     alignItem: 'center',
     marginTop: wp(4),
+    backgroundColor: Colors.gray,
     marginHorizontal: wp(5),
     borderBottomWidth: 0.7,
-    borderBottomColor: 'white',
+    borderRadius: 25,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    // borderBottomColor: 'white',
     paddingBottom: wp(2),
   },
   main: {
@@ -107,7 +123,7 @@ const styles = StyleSheet.create({
     marginLeft: wp(4),
   },
   text: {
-    fontSize: 16,
+    fontSize: 14,
     fontFamily: 'MontserratAlternates-SemiBold',
     letterSpacing: 1,
     color: Colors.white,
@@ -119,12 +135,14 @@ const styles = StyleSheet.create({
     color: 'grey',
   },
   img: {
-    width: wp(20),
+    width: 50,
     height: wp(20),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   profile: {
-    width: wp(20),
-    height: wp(20),
+    width: 50,
+    height: 50,
     // alignSelf: 'center',
     borderRadius: wp(10),
     // marginTop:wp(5)

@@ -80,15 +80,19 @@ export default Follower;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: Colors.gray,
+    backgroundColor: 'black',
   },
   mainBox: {
     flexDirection: 'row',
     alignItem: 'center',
     marginTop: wp(4),
     marginHorizontal: wp(5),
+    backgroundColor: Colors.gray,
     borderBottomWidth: 0.7,
-    borderBottomColor: 'white',
+    borderRadius: 25,
+    // borderBottomColor: 'white',
+    paddingHorizontal: 10,
+    paddingVertical: 10,
     paddingBottom: wp(2),
   },
   main: {
@@ -109,12 +113,14 @@ const styles = StyleSheet.create({
   },
 
   img: {
-    width: wp(20),
+    width: 50,
     height: wp(20),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   profile: {
-    width: wp(20),
-    height: wp(20),
+    width: 50,
+    height: 50,
     // alignSelf: 'center',
     borderRadius: wp(10),
     // marginTop:wp(5)

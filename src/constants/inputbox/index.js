@@ -11,14 +11,16 @@ const Box = ({lab, wid, place, val, onchg, type, autoCapitalize, labplace}) => {
 
   return (
     <>
-      <Text
-        style={{
-          fontSize: 16,
-          fontFamily: 'MontserratAlternates-Semibold',
-          color: 'white',
-        }}>
-        {lab}
-      </Text>
+      {lab != 'social' ? (
+        <Text
+          style={{
+            fontSize: 16,
+            fontFamily: 'MontserratAlternates-Semibold',
+            color: 'white',
+          }}>
+          {lab}
+        </Text>
+      ) : null}
       <TextInput
         // type="outlined"
         mode="outlined"
@@ -35,7 +37,7 @@ const Box = ({lab, wid, place, val, onchg, type, autoCapitalize, labplace}) => {
         }
         editable={
           type == 'edt' ||
-          lab == 'GROUP TYPE' ||
+          lab == 'Group Type' ||
           lab == 'DESCRIPTION' ||
           lab == 'ADD MEMBERS' ||
           lab == 'GENRE' ||
@@ -45,7 +47,7 @@ const Box = ({lab, wid, place, val, onchg, type, autoCapitalize, labplace}) => {
         }
         value={val}
         autoCapitalize={autoCapitalize}
-        placeholder={lab ? lab : place}
+        placeholder={place ? place : lab}
         placeholderTextColor={lab == 'userne' ? 'white' : 'grey'}
         multiline={
           lab == 'ENTER MESSAGE' ||

@@ -6,6 +6,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   Platform,
+  Image,
 } from 'react-native';
 import Colors, {images} from '../../constants';
 import styles from './style';
@@ -17,6 +18,7 @@ import {
 } from 'react-native-responsive-screen';
 import {forgot} from '../apis/index';
 import Loader from '../../constants/loader';
+import GradientButton from '../../Components/GradientButton';
 
 const Forget = ({navigation}: {navigation: any}) => {
   const [email, setemail] = useState('');
@@ -53,7 +55,7 @@ const Forget = ({navigation}: {navigation: any}) => {
   };
 
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       {Platform.OS != 'ios' ? (
         <StatusBar
           barStyle="light-content"
@@ -69,17 +71,35 @@ const Forget = ({navigation}: {navigation: any}) => {
             color={Colors.white}
             onPress={() => navigation.goBack()}
           />
-          <Text style={styles.title}>Forgot Password?</Text>
+          {/* <Text style={styles.title}>Forgot Password?</Text> */}
           <Text></Text>
         </View>
 
         <View style={styles.box}>
           <View style={styles.boxinside}>
-            <Text style={styles.text}>
-              Enter your email for the verification process. {'\n'}We will send
-              you 4 digits code to your email
+            <View style={styles.imgplace}>
+              <Image
+                source={require('../../assets/images/HeadPhone.png')}
+                style={styles.profile}
+                resizeMode="contain"
+              />
+            </View>
+            <Text
+              style={[
+                styles.text,
+                {fontSize: 20, fontFamily: 'MontserratAlternates-Medium'},
+              ]}>
+              Forgot Password
             </Text>
-            <View style={{marginVertical: hp(10)}}>
+            <Text
+              style={[
+                styles.text,
+                {marginTop: 10, color: 'grey', fontSize: 14},
+              ]}>
+              To reset your password, you need your email or mobile number that
+              can be authenticated
+            </Text>
+            <View style={{marginVertical: hp(5)}}>
               <Box lab="E-mail" val={email} onchg={txt => setemail(txt)} />
             </View>
             <Text
@@ -92,12 +112,13 @@ const Forget = ({navigation}: {navigation: any}) => {
               {err}
             </Text>
 
-            <TouchableOpacity
+            {/* <TouchableOpacity
               activeOpacity={0.8}
               style={styles.button}
               onPress={() => fget()}>
               <Text style={styles.login}>Send</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
+            <GradientButton title={'Send'} onPress={fget} />
             {/* navigation.navigate('verify'); */}
             <Loader sts={loding} />
           </View>

@@ -31,6 +31,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import Icon3 from 'react-native-vector-icons/Ionicons';
 import dynamicLinks from '@react-native-firebase/dynamic-links';
 import {detailApiForm} from '../apis/index';
+import LinearGradient from 'react-native-linear-gradient';
 const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
   const [arydata, setarydata] = useState('');
   const {userData} = useSelector(({USER}) => USER);
@@ -50,6 +51,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
   const [tik, settik] = useState(dataitem.like);
 
   const dataMan = async ids => {
+    console.log('route', route.params?.dataitem);
     const data = new FormData();
     data.append('id', route.params?.dataitem);
     await detailApi({Auth: userData?.api_token, id: route.params?.dataitem})
@@ -86,35 +88,53 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
   const dispatch = useDispatch();
 
   const renderFriend = ({item}) => (
-    <View
-      style={{
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        width: wp(20),
-        marginTop: hp(1.5),
-      }}>
-      <Image
-        source={item.image == null ? images.explore : {uri: item.image}}
-        resizeMode="contain"
-        style={{width: wp(18), height: wp(18), borderRadius: wp(9)}}
-      />
-      <Text
+    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+      <View
         style={{
-          color: 'white',
-          fontSize: 14,
-          fontFamily: 'MontserratAlternates-Regular',
-        }}>
-        {item.firstname}
-      </Text>
+          height: 5,
+          width: 5,
+          // marginLeft: 15,
+          borderRadius: 5,
+          backgroundColor: 'grey',
+        }}></View>
+      <Text style={styles.login}>{item.firstname}</Text>
     </View>
+    // <View
+    //   style={{
+    //     flexDirection: 'column',
+    //     alignItems: 'center',
+    //     justifyContent: 'space-between',
+    //     width: wp(20),
+    //     marginTop: hp(1.5),
+    //   }}>
+    //   <Image
+    //     source={item.image == null ? images.explore : {uri: item.image}}
+    //     resizeMode="contain"
+    //     style={{width: wp(18), height: wp(18), borderRadius: wp(9)}}
+    //   />
+    //   <Text
+    //     style={{
+    //       color: 'white',
+    //       fontSize: 14,
+    //       fontFamily: 'MontserratAlternates-Regular',
+    //     }}>
+    //     {item.firstname}
+    //   </Text>
+    // </View>
   );
   const renderItem = ({item}) => (
     <TouchableOpacity
       onPress={() => {
         setcurrent(item.image), setmodalState(true);
       }}
-      style={{width: wp(30), height: hp(21)}}>
+      style={{
+        width: wp(30),
+        borderRadius: 10,
+        marginRight: 10,
+        marginTop: 10,
+        overflow: 'hidden',
+        height: hp(21),
+      }}>
       <Image
         source={{uri: item.image}}
         style={styles.bpictures}
@@ -194,7 +214,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
       });
   };
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.edit}>
       <SafeAreaView style={{flex: 1}}>
         {Platform.OS != 'ios' ? (
           <StatusBar
@@ -212,7 +232,14 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
               color={Colors.white}
               style={{marginBottom: wp(5)}}
             />
-
+            <Text
+              style={{
+                fontSize: 20,
+                color: 'white',
+                fontFamily: 'MontserratAlternates-Semibold',
+              }}>
+              Profile Detail
+            </Text>
             <Icon1
               name="sharealt"
               size={25}
@@ -233,59 +260,52 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                       : {uri: dataitem.image}
                   }
                   style={styles.profile}
-                  resizeMode="cover"
+                  resizeMode="contain"
                 />
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginTop: wp(5),
-                    marginBottom: hp(2),
-                  }}>
-                  <Text
-                    style={styles.name}
-                    onPress={() => {
-                      navigation.navigate('genre');
-                    }}>
-                    {dataitem.firstname + ' ' + dataitem.lastname}
-                  </Text>
-                  {dataitem.verified == 1 ? (
-                    <TouchableOpacity style={styles.icns}>
-                      <Icon3
-                        name="md-musical-note"
-                        size={12}
-                        color={Colors.main_back_color}
-                      />
-                    </TouchableOpacity>
-                  ) : null}
-                </View>
               </View>
             </View>
-
+            <View
+              style={{
+                flexDirection: 'row',
+                // alignItems: 'center',
+                // justifyContent: 'center'
+                // ,
+                marginLeft: 15,
+                // marginTop: wp(5),
+                // backgroundColor: 'red',
+                marginBottom: hp(2),
+              }}>
+              <Text
+                style={styles.name}
+                onPress={() => {
+                  navigation.navigate('genre');
+                }}>
+                {dataitem.firstname + ' ' + dataitem.lastname}
+              </Text>
+              {dataitem.verified == 1 ? (
+                <TouchableOpacity style={styles.icns}>
+                  <Icon3
+                    name="md-musical-note"
+                    size={12}
+                    color={Colors.main_back_color}
+                  />
+                </TouchableOpacity>
+              ) : null}
+            </View>
+            <Text
+              style={{
+                color: 'grey',
+                fontSize: 14,
+                marginLeft: 15,
+                fontFamily: 'MontserratAlternates-Regular',
+                letterSpacing: 1,
+                // marginVertical: wp(3),
+                // color: 'white',
+              }}>
+              {dataitem.about_me}
+            </Text>
             <View style={styles.aboutbox}>
               <View style={styles.aboutboxinside}>
-                <Text
-                  style={{
-                    fontSize: 16,
-                    fontFamily: 'MontserratAlternates-SemiBold',
-                    color: Colors.main_back_color,
-                  }}>
-                  About
-                </Text>
-
-                <Text
-                  style={{
-                    color: 'grey',
-                    fontSize: 14,
-                    fontFamily: 'MontserratAlternates-Regular',
-                    letterSpacing: 1,
-                    marginVertical: wp(3),
-                    color: 'white',
-                  }}>
-                  {dataitem.about_me}
-                </Text>
-
                 <View style={styles.social}>
                   {dataitem.facebook != null ? (
                     <TouchableOpacity
@@ -397,69 +417,10 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
 
             <View style={[styles.aboutbox, {marginTop: wp(3)}]}>
               <View style={styles.aboutboxinside}>
-                <Text
-                  style={{
-                    fontSize: 16,
-                    fontFamily: 'MontserratAlternates-SemiBold',
-                    color: Colors.main_back_color,
-                  }}>
-                  Options
-                </Text>
-
                 <View
                   style={{
                     flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    marginTop: hp(2),
-                    marginHorizontal: wp(10),
-                  }}>
-                  <TouchableOpacity
-                    style={styles.icn}
-                    onPress={() => dislikefun(dataitem.id)}>
-                    <Text
-                      style={{
-                        fontSize: 30,
-                        fontFamily: 'MontserratAlternates-SemiBold',
-                        color: cros == 1 ? Colors.main_back_color : 'grey',
-                      }}>
-                      X
-                    </Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity
-                    style={styles.icn}
-                    onPress={() =>
-                      navigation.navigate('msg', {
-                        item: dataitem,
-                        time: dataitem.created_at,
-                      })
-                    }>
-                    <Icon
-                      name="chatbox-ellipses"
-                      size={22}
-                      color={Colors.white}
-                    />
-                  </TouchableOpacity>
-
-                  <TouchableOpacity
-                    style={styles.icn}
-                    onPress={() => likefun(dataitem.id)}>
-                    <Icon
-                      name="md-musical-note"
-                      size={30}
-                      color={tik == 1 ? Colors.main_back_color : 'grey'}
-                    />
-                  </TouchableOpacity>
-                </View>
-              </View>
-            </View>
-
-            <View style={[styles.aboutbox, {marginTop: wp(3)}]}>
-              <View style={styles.aboutboxinside}>
-                <View
-                  style={{
-                    flexDirection: 'row',
+                    marginBottom: 10,
                     justifyContent: 'space-between',
                     alignItems: 'center',
                   }}>
@@ -467,7 +428,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                     style={{
                       fontSize: 16,
                       fontFamily: 'MontserratAlternates-SemiBold',
-                      color: Colors.main_back_color,
+                      color: Colors.white,
                     }}>
                     Friends {''}
                     <Text style={{color: 'white', fontSize: 13}}>
@@ -485,34 +446,62 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                 </View>
 
                 <FlatList
-                  numColumns={4}
+                  // numColumns={4}
                   data={dataitem?.friends?.slice(0, 8)}
                   renderItem={renderFriend}
                   keyExtractor={item => item.id}
                 />
               </View>
             </View>
-
-            <TouchableOpacity
+            <Text
+              style={{
+                marginLeft: 15,
+                marginBottom: 10,
+                color: 'white',
+                fontSize: 16,
+                fontFamily: 'MontserratAlternates-SemiBold',
+              }}>
+              Skills
+            </Text>
+            {dataitem?.interest?.map(item => (
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <View
+                  style={{
+                    height: 5,
+                    width: 5,
+                    marginLeft: 15,
+                    borderRadius: 5,
+                    backgroundColor: 'grey',
+                  }}></View>
+                <Text style={styles.login}>{item}</Text>
+              </View>
+            ))}
+            {/* <TouchableOpacity
               activeOpacity={0.8}
               style={[styles.button, {marginTop: wp(2)}]}>
               <View
                 style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  // flexDirection: 'column',
+                  // alignItems: 'center',
+                  // justifyContent: 'center',
                 }}>
                 <Text style={styles.login}>
                   {dataitem?.interest?.toString()}
                 </Text>
-                {/* <Image
-                // source={images.producer}
-                style={styles.picon}
-                resizeMode="contain"
-              /> */}
+                
               </View>
-            </TouchableOpacity>
-
+            </TouchableOpacity> */}
+            <Text
+              style={{
+                marginLeft: 15,
+                marginBottom: 10,
+                marginTop: 20,
+                color: 'white',
+                fontSize: 16,
+                fontFamily: 'MontserratAlternates-SemiBold',
+              }}>
+              Gallary
+            </Text>
             <View
               style={{
                 marginHorizontal: wp(5),
@@ -526,6 +515,72 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                 key={3}
                 renderItem={renderItem}
               />
+            </View>
+            <View style={[styles.aboutbox, {marginTop: wp(3)}]}>
+              <View style={styles.aboutboxinside}>
+                {/* <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'MontserratAlternates-SemiBold',
+                    color: Colors.main_back_color,
+                  }}>
+                  Options
+                </Text> */}
+
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    backgroundColor: '#1A0B19',
+                    height: 115,
+                    borderWidth: 1,
+                    borderColor: Colors.main_back_color,
+                    paddingHorizontal: 20,
+                    borderRadius: 10,
+                    width: wp(90),
+                    // marginTop: hp(2),
+                    // marginHorizontal: wp(10),
+                  }}>
+                  <TouchableOpacity
+                    style={styles.icn}
+                    onPress={() => dislikefun(dataitem.id)}>
+                    <Text
+                      style={{
+                        fontSize: 30,
+                        fontFamily: 'MontserratAlternates-SemiBold',
+                        color: cros == 1 ? Colors.main_back_color : 'grey',
+                      }}>
+                      X
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.icn}
+                    onPress={() => likefun(dataitem.id)}>
+                    <LinearGradient
+                      colors={['#9B1B95', '#FF4043']}
+                      style={[styles.actionButton, styles.musicButton]}
+                      start={{x: 0, y: 0}}
+                      end={{x: 1, y: 1}}>
+                      <Icon name="musical-note" size={45} color={'white'} />
+                    </LinearGradient>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.icn}
+                    onPress={() =>
+                      navigation.navigate('msg', {
+                        item: dataitem,
+                        time: dataitem.created_at,
+                      })
+                    }>
+                    <Icon
+                      name="chatbox-ellipses"
+                      size={22}
+                      color={Colors.white}
+                    />
+                  </TouchableOpacity>
+                </View>
+              </View>
             </View>
           </ScrollView>
         </View>

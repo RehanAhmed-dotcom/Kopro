@@ -433,7 +433,7 @@ const ChatComp = props => {
                   <View
                     style={{
                       // flex: 1,
-                      backgroundColor: 'red',
+                      // backgroundColor: 'red',
                       paddingBottom: hp(15),
                     }}>
                     {Object.keys(mem).map(key => (
@@ -444,6 +444,7 @@ const ChatComp = props => {
                           alignItems: 'center',
                         }}
                         onPress={() => {
+                          // console.log('itme', key);
                           setmodalview(false),
                             navigation.navigate('producerdetail', {
                               dataitem: mem[key]?.id,

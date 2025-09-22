@@ -93,81 +93,79 @@ const Others = ({navigation}: {navigation: any}) => {
   };
 
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      <SafeAreaView style={{flex:1}}>
-
-   
-      {Platform.OS != 'ios' ? (
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-      ) : null}
-      <View style={styles.root}>
-        <View style={styles.top}>
-          <Icon
-            name="arrowleft"
-            size={25}
-            color={Colors.white}
-            onPress={() => navigation.goBack()}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      <SafeAreaView style={{flex: 1}}>
+        {Platform.OS != 'ios' ? (
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
           />
-          <Text style={styles.title}>Others Group</Text>
-          <Text></Text>
-        </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            alignSelf: 'center',
-          }}>
+        ) : null}
+        <View style={styles.root}>
+          <View style={styles.top}>
+            <Icon
+              name="arrowleft"
+              size={25}
+              color={Colors.white}
+              onPress={() => navigation.goBack()}
+            />
+            <Text style={styles.title}>Others Group</Text>
+            <Text></Text>
+          </View>
           <View
             style={{
               flexDirection: 'row',
-              justifyContent: 'space-between',
               alignItems: 'center',
-              width: wp(90),
+              justifyContent: 'space-between',
               alignSelf: 'center',
             }}>
-            <TextInput
-              style={styles.input}
-              placeholderTextColor="white"
-              placeholder="Search here..."
-              // keyboardType="al"
-              value={first}
-              onChangeText={txt => setfirst(txt)}
-              onBlur={() => SearchJob()}
-            />
-            <TouchableOpacity
+            <View
               style={{
-                width: wp(12),
-                height: wp(12),
-                position: 'absolute',
-                justifyContent: 'center',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
                 alignItems: 'center',
-                right: 0,
+                width: wp(90),
+                alignSelf: 'center',
               }}>
-              <Icon1
-                name="close"
-                size={22}
-                color={Colors.white}
-                onPress={() => {
-                  setfirst(''), SearchJob();
-                }}
+              <TextInput
+                style={styles.input}
+                placeholderTextColor="white"
+                placeholder="Search here..."
+                // keyboardType="al"
+                value={first}
+                onChangeText={txt => setfirst(txt)}
+                onBlur={() => SearchJob()}
               />
-            </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  width: wp(12),
+                  height: wp(12),
+                  position: 'absolute',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  right: 0,
+                }}>
+                <Icon1
+                  name="close"
+                  size={22}
+                  color={Colors.white}
+                  onPress={() => {
+                    setfirst(''), SearchJob();
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
           </View>
+
+          <FlatList
+            data={arydata}
+            renderItem={renderItem}
+            keyExtractor={item => item.id}
+          />
+
+          <Loader sts={loding} />
         </View>
-
-        <FlatList
-          data={arydata}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-        />
-
-        <Loader sts={loding} />
-      </View>
       </SafeAreaView>
     </ImageBackground>
   );

@@ -29,6 +29,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import {useSelector} from 'react-redux';
+import GradientButton from '../../Components/GradientButton';
 
 const Groups = ({navigation}: {navigation: any}) => {
   const {userData} = useSelector(({USER}) => USER);
@@ -273,102 +274,112 @@ const Groups = ({navigation}: {navigation: any}) => {
   console.log('groupuser', groupUsers);
   console.log('groupmembers', groupMembers);
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      <SafeAreaView style={{flex:1}}>
-
-     
-      {Platform.OS != 'ios' ? (
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-      ) : null}
-
-      <View style={styles.root}>
-        <View style={styles.top}>
-          <Icon
-            name="arrowleft"
-            size={25}
-            color={Colors.white}
-            onPress={() => navigation.goBack()}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      <SafeAreaView style={{flex: 1}}>
+        {Platform.OS != 'ios' ? (
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
           />
-          <Text style={styles.title}>Create Group</Text>
-          <Text></Text>
-        </View>
-        <KeyboardAvoidingView
-          style={{flex: 1}}
-          behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
-          <ScrollView
-            keyboardShouldPersistTaps={'handled'}
-            showsVerticalScrollIndicator={false}>
-            <View style={styles.box}>
-              <View style={styles.boxinside}>
-                <Image
-                  source={cover == '' ? images.grp : {uri: cover}}
-                  style={styles.pic}
-                  resizeMode="cover"
-                />
-                <TouchableOpacity
-                  style={styles.cover}
-                  onPress={() => coverimg()}>
-                  <Text style={styles.coverText}>Add Cover</Text>
-                </TouchableOpacity>
+        ) : null}
 
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    height: hp(12),
-                    justifyContent: 'center',
-                    alignSelf: 'center',
-                    bottom: hp(8),
-                  }}>
+        <View style={styles.root}>
+          <View style={styles.top}>
+            <Icon
+              name="arrowleft"
+              size={25}
+              color={Colors.white}
+              onPress={() => navigation.goBack()}
+            />
+            <Text style={styles.title}>Create Group</Text>
+            <Text></Text>
+          </View>
+          <KeyboardAvoidingView
+            style={{flex: 1}}
+            behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
+            <ScrollView
+              keyboardShouldPersistTaps={'handled'}
+              showsVerticalScrollIndicator={false}>
+              <View style={styles.box}>
+                <View style={styles.boxinside}>
                   <TouchableOpacity
-                    style={styles.profile}
-                    onPress={() => selectimg()}>
+                    // style={styles.cover}
+                    onPress={() => coverimg()}>
                     <Image
-                      source={images.imgupload}
-                      style={{
-                        width: wp(5),
-                        height: wp(5),
-                        tintColor: Colors.main_back_color,
-                      }}
+                      source={cover == '' ? images.grp : {uri: cover}}
+                      style={styles.pic}
+                      resizeMode="cover"
+                    />
+                  </TouchableOpacity>
+
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      height: hp(12),
+                      justifyContent: 'center',
+                      // backgroundColor: 'red',
+                      width: '100%',
+
+                      alignSelf: 'center',
+                      bottom: hp(11),
+                    }}>
+                    <TouchableOpacity
+                      style={styles.profile}
+                      onPress={() => selectimg()}>
+                      <Image
+                        source={images.imgupload}
+                        style={{
+                          width: wp(5),
+                          height: wp(5),
+                          tintColor: Colors.main_back_color,
+                        }}
+                        resizeMode="contain"
+                      />
+                    </TouchableOpacity>
+                    <Image
+                      source={img == '' ? images.explore : {uri: img}}
+                      style={styles.logos}
                       resizeMode="contain"
                     />
-                  </TouchableOpacity>
-                  <Image
-                    source={img == '' ? images.explore : {uri: img}}
-                    style={styles.logos}
-                    resizeMode="contain"
-                  />
-                </View>
+                    <Text
+                      style={[
+                        styles.coverText,
+                        {position: 'absolute', top: 100},
+                      ]}>
+                      Add Image & cover Image
+                    </Text>
+                  </View>
 
-                <View style={{marginHorizontal: wp(5)}}>
-                  <Box
-                    lab="GROUP NAME"
-                    val={name}
-                    onchg={txt => setname(txt)}
-                  />
-                  <Box
-                    lab="DESCRIPTION "
-                    val={aboutme}
-                    onchg={txt => setaboutme(txt)}
-                  />
-
-                  <TouchableOpacity onPress={() => setModalVisible(true)}>
-                    <Icon1
-                      name="keyboard-arrow-down"
-                      size={20}
-                      color={Colors.white}
-                      style={{
-                        position: 'absolute',
-                        top: wp(7),
-                        alignSelf: 'flex-end',
-                      }}
+                  <View style={{marginHorizontal: 0}}>
+                    <Box
+                      lab="Group Name"
+                      val={name}
+                      onchg={txt => setname(txt)}
                     />
-                    <Box lab="GROUP TYPE" val={mtext} />
-                  </TouchableOpacity>
-                  {/* <TouchableOpacity onPress={() => setuserModal(true)}>
+                    <Box
+                      lab="Add Description"
+                      val={aboutme}
+                      onchg={txt => setaboutme(txt)}
+                    />
+
+                    <TouchableOpacity
+                      style={{}}
+                      onPress={() => setModalVisible(true)}>
+                      <Icon1
+                        name="keyboard-arrow-down"
+                        size={20}
+                        color={Colors.white}
+                        style={{
+                          position: 'absolute',
+                          top: wp(12),
+                          right: 15,
+                          alignSelf: 'flex-end',
+                        }}
+                      />
+                      <Box lab="Group Type" val={mtext} />
+                    </TouchableOpacity>
+                    {/* <TouchableOpacity onPress={() => setuserModal(true)}>
                   <Icon1
                     name="keyboard-arrow-down"
                     size={20}
@@ -381,103 +392,91 @@ const Groups = ({navigation}: {navigation: any}) => {
                   />
                   <Box lab="ADD MEMBERS" val={membername.toString()} />
                 </TouchableOpacity> */}
+                  </View>
                 </View>
               </View>
-            </View>
-            <Text
-              style={{
-                marginTop: hp(6),
-                alignSelf: 'center',
-                color: 'red',
-                fontSize: 13,
-                fontFamily: 'MontserratAlternates-SemiBold',
-              }}>
-              {err}
-            </Text>
-
-            <TouchableOpacity
-              onPress={() => {
-                creategroup();
-                // navigation.navigate('bottomtab');
-              }}
-              activeOpacity={0.8}
-              style={[styles.button, {alignSelf: 'center', marginBottom: 40}]}>
-              <Text style={styles.login}>Add Group</Text>
-            </TouchableOpacity>
-
-            <Modal
-              animationType="fade"
-              visible={modalVisible}
-              transparent={true}>
-              <View style={styles.boxmodal}>
-                <View style={styles.boxinsidemodal}>
-                  <TouchableOpacity
-                    onPress={() => {
-                      setmtext('Public'), setModalVisible(false);
-                    }}>
-                    <Text style={styles.modalText}>Public</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    onPress={() => {
-                      setmtext('Private'), setModalVisible(false);
-                    }}>
-                    <Text style={styles.modalText}>Private</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
-            </Modal>
-
-            <Modal animationType="fade" visible={userModal} transparent={true}>
-              <View
+              <Text
                 style={{
-                  backgroundColor: 'rgba(255,255,255,0.1)',
-                  flex: 1,
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  marginTop: hp(6),
+                  alignSelf: 'center',
+                  color: 'red',
+                  fontSize: 13,
+                  fontFamily: 'MontserratAlternates-SemiBold',
                 }}>
-                <View style={styles.boxmodal1}>
-                  <View style={styles.boxinsidemodal1}>
-                    <FlatList
-                      data={arydata}
-                      renderItem={renderList}
-                      keyExtractor={item => item.id}
-                    />
-                    <View
-                      style={{
-                        flexDirection: 'row',
-                        justifyContent: 'space-around',
+                {err}
+              </Text>
+
+              {/* <TouchableOpacity
+                onPress={() => {
+                  creategroup();
+                  // navigation.navigate('bottomtab');
+                }}
+                activeOpacity={0.8}
+                style={[
+                  styles.button,
+                  {alignSelf: 'center', marginBottom: 40},
+                ]}>
+                <Text style={styles.login}>Add Group</Text>
+              </TouchableOpacity> */}
+              <GradientButton
+                title={'Add Group'}
+                onPress={creategroup}
+                style={{marginBottom: 40, marginHorizontal: 30}}
+              />
+
+              <Modal
+                animationType="fade"
+                visible={modalVisible}
+                transparent={true}>
+                <View style={styles.boxmodal}>
+                  <View style={styles.boxinsidemodal}>
+                    <TouchableOpacity
+                      onPress={() => {
+                        setmtext('Public'), setModalVisible(false);
                       }}>
-                      <TouchableOpacity
-                        onPress={() => {
-                          setcheck([]),
-                            setNewelectedata([]),
-                            setGroupMembers([]),
-                            setGroupUsers([]);
-                          setuserModal(false);
-                        }}
+                      <Text style={styles.modalText}>Public</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      onPress={() => {
+                        setmtext('Private'), setModalVisible(false);
+                      }}>
+                      <Text style={styles.modalText}>Private</Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </Modal>
+
+              <Modal
+                animationType="fade"
+                visible={userModal}
+                transparent={true}>
+                <View
+                  style={{
+                    backgroundColor: 'rgba(255,255,255,0.1)',
+                    flex: 1,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                  <View style={styles.boxmodal1}>
+                    <View style={styles.boxinsidemodal1}>
+                      <FlatList
+                        data={arydata}
+                        renderItem={renderList}
+                        keyExtractor={item => item.id}
+                      />
+                      <View
                         style={{
-                          justifyContent: 'center',
-                          alignContent: 'flex-end',
-                          backgroundColor: Colors.main_back_color,
-                          width: wp(20),
-                          height: wp(10),
-                          alignItems: 'center',
-                          marginTop: wp(5),
-                          alignSelf: 'flex-end',
-                          borderRadius: wp(5),
+                          flexDirection: 'row',
+                          justifyContent: 'space-around',
                         }}>
-                        <Text
-                          style={{
-                            fontSize: 12,
-                            fontFamily: 'MontserratAlternates-SemiBold',
-                            letterSpacing: 1,
-                            color: Colors.white,
-                          }}>
-                          Cancel
-                        </Text>
-                      </TouchableOpacity>
-                      {check.length > 0 ? (
                         <TouchableOpacity
+                          onPress={() => {
+                            setcheck([]),
+                              setNewelectedata([]),
+                              setGroupMembers([]),
+                              setGroupUsers([]);
+                            setuserModal(false);
+                          }}
                           style={{
                             justifyContent: 'center',
                             alignContent: 'flex-end',
@@ -488,9 +487,6 @@ const Groups = ({navigation}: {navigation: any}) => {
                             marginTop: wp(5),
                             alignSelf: 'flex-end',
                             borderRadius: wp(5),
-                          }}
-                          onPress={() => {
-                            setuserModal(false);
                           }}>
                           <Text
                             style={{
@@ -499,18 +495,44 @@ const Groups = ({navigation}: {navigation: any}) => {
                               letterSpacing: 1,
                               color: Colors.white,
                             }}>
-                            Add
+                            Cancel
                           </Text>
                         </TouchableOpacity>
-                      ) : null}
+                        {check.length > 0 ? (
+                          <TouchableOpacity
+                            style={{
+                              justifyContent: 'center',
+                              alignContent: 'flex-end',
+                              backgroundColor: Colors.main_back_color,
+                              width: wp(20),
+                              height: wp(10),
+                              alignItems: 'center',
+                              marginTop: wp(5),
+                              alignSelf: 'flex-end',
+                              borderRadius: wp(5),
+                            }}
+                            onPress={() => {
+                              setuserModal(false);
+                            }}>
+                            <Text
+                              style={{
+                                fontSize: 12,
+                                fontFamily: 'MontserratAlternates-SemiBold',
+                                letterSpacing: 1,
+                                color: Colors.white,
+                              }}>
+                              Add
+                            </Text>
+                          </TouchableOpacity>
+                        ) : null}
+                      </View>
                     </View>
                   </View>
                 </View>
-              </View>
-            </Modal>
-          </ScrollView>
-        </KeyboardAvoidingView>
-      </View>
+              </Modal>
+            </ScrollView>
+          </KeyboardAvoidingView>
+        </View>
       </SafeAreaView>
     </ImageBackground>
   );

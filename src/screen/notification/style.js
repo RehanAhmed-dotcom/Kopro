@@ -20,7 +20,12 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
   },
   profileimg: {
-    borderWidth: 1.5,
+    width: 35,
+    height: 35,
+    backgroundColor: '#30172F',
+    alignItems: 'center',
+    justifyContent: 'center',
+    // borderWidth: 1.5,
     borderColor: 'white',
     borderRadius: wp(9),
   },
@@ -36,10 +41,10 @@ export default StyleSheet.create({
     marginHorizontal: wp(5),
   },
   boxinside: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingTop: hp(5),
-    paddingHorizontal: wp(5),
+    // paddingHorizontal: wp(5),
     // height:hp(67)
     marginBottom: wp(5),
   },
@@ -56,16 +61,20 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   profile: {
-    width: wp(16),
-    height: wp(16),
+    width: 15,
+    height: 15,
     borderRadius: wp(8),
   },
   main: {
     flexDirection: 'row',
+    backgroundColor: '#191919',
     alignItems: 'flex-start',
+    paddingTop: 10,
+    borderRadius: 10,
+    paddingHorizontal: 10,
     marginBottom: hp(3),
     borderBottomColor: 'white',
-    borderBottomWidth: 1,
+    // borderBottomWidth: 1,
     paddingBottom: hp(2),
   },
   seq: {
@@ -92,9 +101,9 @@ export default StyleSheet.create({
   },
   msg: {
     width: wp(60),
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: 'MontserratAlternates-Regular',
-    color: 'white',
+    color: 'grey',
     flexWrap: 'nowrap',
   },
   postlike: {
