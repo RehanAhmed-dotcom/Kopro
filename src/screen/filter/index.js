@@ -33,6 +33,7 @@ import {
 import {useSelector} from 'react-redux';
 import Box from '../../constants/inputbox';
 import Loader from '../../constants/loader';
+import GradientButton from '../../Components/GradientButton';
 
 const Genre = ({navigation}: {navigation: any}) => {
   const {userData} = useSelector(({USER}) => USER);
@@ -770,12 +771,13 @@ const Genre = ({navigation}: {navigation: any}) => {
                   />
                 </View>
               </ScrollView>
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 activeOpacity={0.8}
                 style={styles.button}
                 onPress={() => searchResult()}>
                 <Text style={styles.login}>Search</Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
+              <GradientButton title={'Search'} onPress={searchResult} />
             </View>
           </View>
         </View>

@@ -234,7 +234,7 @@ const Matches = ({navigation, route}: {navigation: any}) => {
     // setmi1(arr1);
   }, []);
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       {Platform.OS != 'ios' ? (
         <StatusBar
           barStyle="light-content"

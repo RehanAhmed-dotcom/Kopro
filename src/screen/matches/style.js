@@ -1,4 +1,4 @@
-import {Platform,StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -34,7 +34,7 @@ export default StyleSheet.create({
     marginBottom: hp(3),
   },
   boxinside: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingTop: hp(2),
     paddingHorizontal: wp(5),
@@ -64,8 +64,12 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItem: 'center',
     marginTop: wp(4),
-    borderBottomWidth: 0.7,
+    backgroundColor: Colors.gray,
+    paddingLeft: 10,
+    // borderBottomWidth: 0.7,
+    borderRadius: 10,
     borderBottomColor: 'white',
+    paddingTop: 10,
     paddingBottom: wp(1),
   },
   main: {

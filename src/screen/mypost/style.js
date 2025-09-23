@@ -52,7 +52,7 @@ export default StyleSheet.create({
   boxinside: {
     width: wp(90),
     height: hp(75),
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingTop: hp(1),
     paddingBottom: hp(3),

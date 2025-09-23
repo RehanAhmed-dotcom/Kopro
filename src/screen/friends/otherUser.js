@@ -76,7 +76,7 @@ const Otheruser = ({navigation}) => {
     <ImageBackground
       resizeMode="cover"
       style={styles.headerImage}
-      source={images.back2}>
+      source={images.back}>
       <StatusBar
         barStyle="light-content"
         translucent

@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {
   Text,
   View,
@@ -6,7 +6,7 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-  Platform
+  Platform,
 } from 'react-native';
 import Colors, {images} from '../../constants';
 import styles from './style';
@@ -15,19 +15,21 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import SplashScreen from 'react-native-splash-screen'
+import SplashScreen from 'react-native-splash-screen';
 
 const Play = ({navigation}: {navigation: any}) => {
   useEffect(() => {
     SplashScreen.hide();
-  }, [])
+  }, []);
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      {Platform.OS != 'ios' ?  <StatusBar
-        barStyle="light-content"
-        translucent
-        backgroundColor="transparent" 
-      /> : null}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      {Platform.OS != 'ios' ? (
+        <StatusBar
+          barStyle="light-content"
+          translucent
+          backgroundColor="transparent"
+        />
+      ) : null}
       <View style={styles.root}>
         <View style={styles.top}>
           <Icon
@@ -51,16 +53,25 @@ const Play = ({navigation}: {navigation: any}) => {
               Find the people who match with {'\n'}your music type
             </Text>
           </View>
-          <View style={{alignItems: 'center',marginTop:hp(3)}}>
+          <View style={{alignItems: 'center', marginTop: hp(3)}}>
             <TouchableOpacity
               activeOpacity={0.8}
-              style={[styles.button,{backgroundColor:'transparent'}]}
-              >
-              <Text style={[styles.login,{color:Colors.white,  fontSize: 16,fontFamily:'MontserratAlternates-Medium'}]}>Skip</Text>
+              style={[styles.button, {backgroundColor: 'transparent'}]}>
+              <Text
+                style={[
+                  styles.login,
+                  {
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontFamily: 'MontserratAlternates-Medium',
+                  },
+                ]}>
+                Skip
+              </Text>
             </TouchableOpacity>
             <TouchableOpacity
               activeOpacity={0.8}
-              style={[styles.button,{marginTop:hp(1)}]}
+              style={[styles.button, {marginTop: hp(1)}]}
               onPress={() => {
                 navigation.navigate('addimage');
               }}>

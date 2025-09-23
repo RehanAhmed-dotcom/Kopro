@@ -67,7 +67,7 @@ const Editpost = ({navigation, route}) => {
   };
 
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       <SafeAreaView style={{flex: 1}}>
         {Platform.OS != 'ios' ? (
           <StatusBar

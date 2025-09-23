@@ -112,37 +112,35 @@ const Mypost = ({navigation}: {navigation: any}) => {
     </TouchableOpacity>
   );
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      <SafeAreaView style={{flex:1}}>
-      {Platform.OS != 'ios' ? (
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-      ) : null}
-      <View style={styles.root}>
-        <View style={styles.top}>
-          <Icon
-            name="arrowleft"
-            size={20}
-            color="white"
-            style={{width: 100}}
-            onPress={() => navigation.goBack()}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      <SafeAreaView style={{flex: 1}}>
+        {Platform.OS != 'ios' ? (
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
           />
-          <Text style={styles.title}>My Post</Text>
-          <Text style={{width: 100}}></Text>
-        </View>
+        ) : null}
+        <View style={styles.root}>
+          <View style={styles.top}>
+            <Icon
+              name="arrowleft"
+              size={20}
+              color="white"
+              style={{width: 100}}
+              onPress={() => navigation.goBack()}
+            />
+            <Text style={styles.title}>My Post</Text>
+            <Text style={{width: 100}}></Text>
+          </View>
 
-        <View style={styles.box}>
-          <View style={styles.boxinside}>
-            <FlatList data={arydata} renderItem={renderItem} />
+          <View style={styles.box}>
+            <View style={styles.boxinside}>
+              <FlatList data={arydata} renderItem={renderItem} />
+            </View>
           </View>
         </View>
-      </View>
-
       </SafeAreaView>
-    
     </ImageBackground>
   );
 };

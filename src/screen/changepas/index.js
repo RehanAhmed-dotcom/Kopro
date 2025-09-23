@@ -69,64 +69,63 @@ const Changepass = ({navigation}: {navigation: any}) => {
     }
   };
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      <SafeAreaView style={{flex:1}}>
-  
-      {Platform.OS != 'ios' ? (
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-      ) : null}
-      <View style={styles.root}>
-        <View style={styles.top}>
-          <Icon
-            name="arrowleft"
-            size={25}
-            color={Colors.white}
-            onPress={() => navigation.goBack()}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      <SafeAreaView style={{flex: 1}}>
+        {Platform.OS != 'ios' ? (
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
           />
-          <Text style={styles.title}>Change Password</Text>
-          <Text></Text>
-        </View>
+        ) : null}
+        <View style={styles.root}>
+          <View style={styles.top}>
+            <Icon
+              name="arrowleft"
+              size={25}
+              color={Colors.white}
+              onPress={() => navigation.goBack()}
+            />
+            <Text style={styles.title}>Change Password</Text>
+            <Text></Text>
+          </View>
 
-        <View>
-          <Image
-            source={images.changepass}
-            style={styles.logos}
-            resizeMode="contain"
-          />
-        </View>
+          <View>
+            <Image
+              source={images.changepass}
+              style={styles.logos}
+              resizeMode="contain"
+            />
+          </View>
 
-        <View style={styles.box}>
-          <View style={styles.boxinside}>
-            <View style={{marginBottom: hp(10)}}>
-              <Box
-                lab="Old Password"
-                val={oldpass}
-                onchg={txt => setoldpass(txt)}
-              />
-              <Box
-                lab="New Password"
-                val={password}
-                onchg={txt => setpassword(txt)}
-              />
-              <Box
-                lab="Confirm New Password"
-                val={conpass}
-                onchg={txt => setconpass(txt)}
-              />
+          <View style={styles.box}>
+            <View style={styles.boxinside}>
+              <View style={{marginBottom: hp(10)}}>
+                <Box
+                  lab="Old Password"
+                  val={oldpass}
+                  onchg={txt => setoldpass(txt)}
+                />
+                <Box
+                  lab="New Password"
+                  val={password}
+                  onchg={txt => setpassword(txt)}
+                />
+                <Box
+                  lab="Confirm New Password"
+                  val={conpass}
+                  onchg={txt => setconpass(txt)}
+                />
+              </View>
+              <TouchableOpacity
+                onPress={() => reset()}
+                activeOpacity={0.8}
+                style={styles.button}>
+                <Text style={styles.login}>Update</Text>
+              </TouchableOpacity>
             </View>
-            <TouchableOpacity
-              onPress={() => reset()}
-              activeOpacity={0.8}
-              style={styles.button}>
-              <Text style={styles.login}>Update</Text>
-            </TouchableOpacity>
           </View>
         </View>
-      </View>
       </SafeAreaView>
     </ImageBackground>
   );

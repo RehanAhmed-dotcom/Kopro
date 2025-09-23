@@ -6,7 +6,7 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-  Platform
+  Platform,
 } from 'react-native';
 import Colors, {images} from '../../constants';
 import styles from './style';
@@ -18,12 +18,14 @@ import {
 
 const Make = ({navigation}: {navigation: any}) => {
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      {Platform.OS != 'ios' ?  <StatusBar
-        barStyle="light-content"
-        translucent
-        backgroundColor="transparent" 
-      /> : null}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      {Platform.OS != 'ios' ? (
+        <StatusBar
+          barStyle="light-content"
+          translucent
+          backgroundColor="transparent"
+        />
+      ) : null}
       <View style={styles.root}>
         <View style={styles.top}>
           <Icon
@@ -44,19 +46,20 @@ const Make = ({navigation}: {navigation: any}) => {
               resizeMode="contain"
             />
             <Text style={styles.text}>
-              While working the app, app reminds {'\n'}you to smile,laugh, listen to others {'\n'}music and share music with {'\n'}those who matters
+              While working the app, app reminds {'\n'}you to smile,laugh,
+              listen to others {'\n'}music and share music with {'\n'}those who
+              matters
             </Text>
           </View>
-          <View style={{alignItems: 'center',marginTop:hp(1)}}>
+          <View style={{alignItems: 'center', marginTop: hp(1)}}>
             <TouchableOpacity
               activeOpacity={0.8}
-              style={[styles.button,{backgroundColor:'transparent'}]}
-            >
-              <Text style={[styles.login,{color:Colors.white}]}>Skip</Text>
+              style={[styles.button, {backgroundColor: 'transparent'}]}>
+              <Text style={[styles.login, {color: Colors.white}]}>Skip</Text>
             </TouchableOpacity>
             <TouchableOpacity
               activeOpacity={0.8}
-              style={[styles.button,{marginTop:hp(1)}]}
+              style={[styles.button, {marginTop: hp(1)}]}
               onPress={() => {
                 navigation.navigate('talent');
               }}>

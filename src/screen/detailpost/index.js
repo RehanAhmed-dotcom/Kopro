@@ -66,7 +66,7 @@ const Detailpost = ({navigation, route}: {navigation: any, route: any}) => {
     </TouchableOpacity>
   );
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
+    <ImageBackground style={styles.headerImage} source={images.back}>
       {Platform.OS != 'ios' ? (
         <StatusBar
           barStyle="light-content"

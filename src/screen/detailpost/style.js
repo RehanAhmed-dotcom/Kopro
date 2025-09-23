@@ -12,7 +12,7 @@ export default StyleSheet.create({
     flex: 1,
     resizeMode: 'contain',
     width: wp(100),
-    height: hp(100),
+    // height: hp(100),
   },
   titleText: {
     fontSize: 16,
@@ -65,7 +65,7 @@ export default StyleSheet.create({
     elevation: 20,
   },
   boxinside: {
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.gray,
     borderRadius: wp(4),
     paddingTop: hp(1),
     paddingBottom: hp(4),

@@ -7,7 +7,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   ScrollView,
-  Platform
+  Platform,
 } from 'react-native';
 import Colors, {images} from '../../constants';
 import styles from './style';
@@ -20,12 +20,14 @@ import {
 
 const Songwriter = ({navigation}: {navigation: any}) => {
   return (
-    <ImageBackground style={styles.headerImage} source={images.back2}>
-      {Platform.OS != 'ios' ?  <StatusBar
-        barStyle="light-content"
-        translucent
-        backgroundColor="transparent" 
-      /> : null}
+    <ImageBackground style={styles.headerImage} source={images.back}>
+      {Platform.OS != 'ios' ? (
+        <StatusBar
+          barStyle="light-content"
+          translucent
+          backgroundColor="transparent"
+        />
+      ) : null}
       <View style={styles.root}>
         <View style={styles.top}>
           <Icon1
@@ -80,7 +82,7 @@ const Songwriter = ({navigation}: {navigation: any}) => {
                 style={{
                   color: 'white',
                   fontSize: 12,
-                  fontFamily:'MontserratAlternates-Regular',
+                  fontFamily: 'MontserratAlternates-Regular',
                   letterSpacing: 1,
                   marginVertical: wp(3),
                 }}>
@@ -161,8 +163,9 @@ const Songwriter = ({navigation}: {navigation: any}) => {
               style={styles.bpictures}
               resizeMode="contain"
             />
-        </View>
-        <View style={{
+          </View>
+          <View
+            style={{
               marginHorizontal: wp(5),
               flexDirection: 'row',
               justifyContent: 'space-between',

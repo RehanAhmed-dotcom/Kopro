@@ -239,11 +239,11 @@ const Producer = ({navigation}) => {
                   </Text>
                   <View style={styles.statsContainer}>
                     <View style={styles.stat}>
-                      <Text style={styles.name}>12</Text>
+                      <Text style={styles.name}>{arydata?.following}</Text>
                       <Text style={styles.statLabel}>Following</Text>
                     </View>
                     <View style={[styles.stat, {left: 30}]}>
-                      <Text style={styles.name}>2.5K</Text>
+                      <Text style={styles.name}>{arydata?.follower}</Text>
                       <Text style={styles.statLabel}>Followers</Text>
                     </View>
                   </View>
