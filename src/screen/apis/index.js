@@ -194,7 +194,7 @@ const GetFCM = payload => {
       return status === 200 || status === 201 ? data : null;
     })
     .catch(e => {
-      console.log('in catch register', e);
+      console.log('in catch register', e.response.data.message);
       throw e;
     });
 };

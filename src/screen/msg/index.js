@@ -55,10 +55,10 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
 
     await GetFCM({Auth: userData?.api_token, data})
       .then(res => {
-        console.log('-------------0000--------', res);
+        console.log('-------ggbgbgbg------0000--------', res);
       })
       .catch(error => {
-        console.log('Error FCMToke()()()', error);
+        console.log('Errordfsdf FCMToke()()()', error);
       });
   };
 

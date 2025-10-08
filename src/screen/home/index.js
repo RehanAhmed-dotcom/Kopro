@@ -162,6 +162,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
         }
       })
       .catch(error => {
+         setloding(false);
         console.log('Error Meaasge', error.response.data);
         if (
           error.response.data.message ==
@@ -197,7 +198,8 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
         }
       })
       .catch(error => {
-        console.log('Error Meaasge', error.response.data);
+        setloding(false);
+        console.log('Error Meaasge in home', error.response.data);
         if (
           error.response.data.message == 'You have Already passed on this User'
         ) {
@@ -206,7 +208,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
             ToastAndroid.SHORT,
           );
         } else {
-          console.log('Error Meaasge', error);
+          console.log('Error Meaasge in hommmme', error);
         }
       });
   };
