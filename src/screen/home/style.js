@@ -92,6 +92,7 @@ export default StyleSheet.create({
   detail: {
     color: 'white',
     fontSize: 14,
+    alignSelf:'center',
     right:3,
     fontFamily: 'MontserratAlternates-Regular',
     marginBottom:4,
@@ -174,11 +175,15 @@ export default StyleSheet.create({
   },
   avatarContainer: {
     marginRight: 16,
+    // backgroundColor:"red",
+    width:"100%",
+    alignItems:'center'
   },
   avatar: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+    width: 233,
+    
+    height: 233,
+    borderRadius: 150,
   },
   profileInfo: {
     flex: 1,
@@ -187,6 +192,8 @@ export default StyleSheet.create({
   nameContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent:"center",
+    // backgroundColor:'red',
     marginBottom: 4,
   },
   name: {
@@ -216,6 +223,7 @@ export default StyleSheet.create({
   },
   followStats: {
     flexDirection: 'row',
+    alignSelf:"center",
     alignItems: 'center',
   },
   followText: {
@@ -233,6 +241,7 @@ export default StyleSheet.create({
   bio: {
     color: '#999',
     fontSize: 15,
+    textAlign:"center",
     fontFamily: 'MontserratAlternates-Regular',
     lineHeight: 22,
   },

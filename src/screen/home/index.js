@@ -244,7 +244,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
               />
             </TouchableOpacity>
           </View>
-          <View style={styles.profileInfo}>
+          {/* <View style={styles.profileInfo}>
             <View style={styles.nameContainer}>
               <Text style={styles.name}>
                 {item.firstname + ' ' + item.lastname}
@@ -281,8 +281,44 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
                 Followers
               </Text>
             </View>
-          </View>
+          </View> */}
         </View>
+        <View style={styles.nameContainer}>
+              <Text style={styles.name}>
+                {item.firstname + ' ' + item.lastname}
+              </Text>
+              {item?.verified == 1 ? (
+                <View style={styles.verifiedBadge}>
+                  <Text style={styles.checkmark}>✓</Text>
+                </View>
+              ) : null}
+            </View>
+            {/* <Text style={styles.detail}>@username</Text> */}
+            <View style={styles.followStats}>
+              <Text style={styles.followText}>
+                <Text
+                  style={{
+                    color: 'white',
+                    fontSize: 12,
+                    fontFamily: 'MontserratAlternates-Regular',
+                  }}>
+                  {item.following}
+                </Text>{' '}
+                Following
+              </Text>
+              <Text style={styles.separator}> | </Text>
+              <Text style={styles.followText}>
+                <Text
+                  style={{
+                    color: 'white',
+                    fontSize: 12,
+                    fontFamily: 'MontserratAlternates-Regular',
+                  }}>
+                  {item.follower}
+                </Text>{' '}
+                Followers
+              </Text>
+            </View>
         <Text style={styles.bio}>
           {item.about_me == null ? 'No Description Added.' : item.about_me}
         </Text>
@@ -447,7 +483,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
 
           {/* {!loding ? ( */}
           <SwiperFlatList
-            horizontal={false}
+            horizontal={true}
             // autoplayDelay={5}
             // index={1}
             // autoplay
