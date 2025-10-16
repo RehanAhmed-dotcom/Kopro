@@ -43,6 +43,7 @@ import messaging from '@react-native-firebase/messaging';
 import bottomtab from '../bottomtab';
 import {fcm_Update} from '../screen/apis';
 import Loopverify from '../screen/loopverify';
+import Followers from '../screen/Followers';
 export default function App({navigation}) {
   const Stack = createNativeStackNavigator();
 
@@ -92,7 +93,7 @@ export default function App({navigation}) {
             <Stack.Screen name="producer" component={Producer} />
             <Stack.Screen name="friends" component={Friends} />
             <Stack.Screen name="otheruser" component={Otheruser} />
-
+<Stack.Screen name='Followers' component={Followers}/>
             <Stack.Screen name="own" component={Own} />
             <Stack.Screen name="mate" component={Mate} />
             <Stack.Screen name="labchat" component={Labchat} />

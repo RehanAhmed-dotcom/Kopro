@@ -25,6 +25,7 @@ const Box = ({lab, wid, place, val, onchg, type, autoCapitalize, labplace}) => {
         // type="outlined"
         mode="outlined"
         dense
+        cursorColor="white"
         // underlineColor="grey"
         secureTextEntry={
           lab == 'Confirm Password' ||

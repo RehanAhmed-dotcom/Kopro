@@ -238,13 +238,40 @@ const Producer = ({navigation}) => {
                       : arydata.about_me}
                   </Text>
                   <View style={styles.statsContainer}>
-                    <View style={styles.stat}>
+                    <TouchableOpacity
+                      onPress={() =>
+                        navigation.navigate('Followers', {
+                          dataitem: arydata?.followingList,
+                          name: 'Following',
+                        })
+                      }
+                      style={styles.stat}
+                    >
                       <Text style={styles.name}>{arydata?.following}</Text>
                       <Text style={styles.statLabel}>Following</Text>
-                    </View>
-                    <View style={[styles.stat, {left: 30}]}>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      onPress={() =>
+                        navigation.navigate('Followers', {
+                          dataitem: arydata?.followerList,
+                          name: 'Followers',
+                        })
+                      }
+                      style={[styles.stat, { left: 30 }]}
+                    >
+                      {/* fglksjgdsfk */}
                       <Text style={styles.name}>{arydata?.follower}</Text>
                       <Text style={styles.statLabel}>Followers</Text>
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.statsContainer}>
+                    <View style={styles.stat}>
+                      <Text style={styles.name}>{arydata?.music_credit}</Text>
+                      {/* <Text style={styles.statLabel}>Following</Text> */}
+                    </View>
+                    <View style={[styles.stat, { left: 30 }]}>
+                      <Text style={styles.name}>{arydata?.location}</Text>
+                      {/* <Text style={styles.statLabel}>Followers</Text> */}
                     </View>
                   </View>
                 </LinearGradient>
