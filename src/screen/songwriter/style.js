@@ -34,7 +34,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 14,
-    fontFamily:'MontserratAlternates-SemiBold',
+    fontFamily:'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
     marginLeft:hp(0.7)
@@ -114,7 +114,7 @@ export default StyleSheet.create({
   name:{
       color:Colors.main_back_color,
       fontSize: 35,
-    fontFamily:'MontserratAlternates-SemiBold',
+    fontFamily:'Helvetica-Bold',
       
       letterSpacing:1,
       textAlign:'center',
@@ -123,7 +123,7 @@ export default StyleSheet.create({
   detail:{
     color:'white',
     fontSize: 14,
-    fontFamily:'MontserratAlternates-Regular',
+    fontFamily:'Helvetica',
     textAlign:'center'
 },
 icn:{
@@ -155,7 +155,7 @@ button: {
   },
   login: {
     fontSize: 18,
-                  fontFamily:'MontserratAlternates-SemiBold',
+                  fontFamily:'Helvetica-Bold',
     color: Colors.white,
     fontWeight: 'bold',
     letterSpacing: 1,

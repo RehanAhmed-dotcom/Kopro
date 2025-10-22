@@ -87,7 +87,7 @@ const Forget = ({navigation}: {navigation: any}) => {
             <Text
               style={[
                 styles.text,
-                {fontSize: 20, fontFamily: 'MontserratAlternates-Medium'},
+                {fontSize: 20, fontFamily: 'Helvetica-Bold'},
               ]}>
               Forgot Password
             </Text>
@@ -107,7 +107,7 @@ const Forget = ({navigation}: {navigation: any}) => {
                 alignSelf: 'center',
                 color: 'red',
                 fontSize: 13,
-                fontFamily: 'MontserratAlternates-SemiBold',
+                fontFamily: 'Helvetica-Bold',
               }}>
               {err}
             </Text>

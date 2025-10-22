@@ -5,7 +5,7 @@ export default {
 };
 const images = {
   back: require('../assets/images/back.png'),
-  logo: require('../assets/images/place.png'),
+  logo: require('../assets/images/Placeholder.jpg'),
   edit: require('../assets/images/pinkBlackPink.png'),
   back2: require('../assets/images/back2.png'),
   play: require('../assets/images/play.png'),

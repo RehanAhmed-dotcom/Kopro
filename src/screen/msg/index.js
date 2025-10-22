@@ -150,7 +150,7 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
                   styles.msg,
                   {
                     color: '#BABABA',
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                   },
                 ]}>
                 {item.msg}
@@ -470,7 +470,7 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
                 <Text
                   style={{
                     fontSize: 16,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     color: 'white',
 
                     letterSpacing: 1,

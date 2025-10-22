@@ -63,7 +63,7 @@ const Play = ({navigation}: {navigation: any}) => {
                   {
                     color: Colors.white,
                     fontSize: 16,
-                    fontFamily: 'MontserratAlternates-Medium',
+                    fontFamily: 'Helvetica-Bold',
                   },
                 ]}>
                 Skip

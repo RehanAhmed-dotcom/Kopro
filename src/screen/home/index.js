@@ -262,7 +262,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
                   style={{
                     color: 'white',
                     fontSize: 12,
-                    fontFamily: 'MontserratAlternates-Regular',
+                    fontFamily: 'Helvetica',
                   }}>
                   {item.following}
                 </Text>{' '}
@@ -274,7 +274,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
                   style={{
                     color: 'white',
                     fontSize: 12,
-                    fontFamily: 'MontserratAlternates-Regular',
+                    fontFamily: 'Helvetica',
                   }}>
                   {item.follower}
                 </Text>{' '}
@@ -300,7 +300,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
                   style={{
                     color: 'white',
                     fontSize: 12,
-                    fontFamily: 'MontserratAlternates-Regular',
+                    fontFamily: 'Helvetica',
                   }}>
                   {item.following}
                 </Text>{' '}
@@ -312,7 +312,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
                   style={{
                     color: 'white',
                     fontSize: 12,
-                    fontFamily: 'MontserratAlternates-Regular',
+                    fontFamily: 'Helvetica',
                   }}>
                   {item.follower}
                 </Text>{' '}
@@ -331,7 +331,7 @@ const Home = ({navigation, route}: {navigation: any, route: any}) => {
           style={{
             color: Colors.white,
             fontSize: 10,
-            fontFamily: 'MontserratAlternates-Regular',
+            fontFamily: 'Helvetica',
             letterSpacing: 1,
             textAlign: 'center',
             marginBottom: hp(1),

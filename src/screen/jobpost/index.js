@@ -178,7 +178,7 @@ const Jobpost = ({navigation}: {navigation: any}) => {
                       roundness: 8,
                       fonts: {
                         regular: {
-                          fontFamily: 'MontserratAlternates-Regular',
+                          fontFamily: 'Helvetica',
                         },
                       },
                     }}
@@ -231,7 +231,7 @@ const Jobpost = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -242,7 +242,7 @@ const Jobpost = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,
@@ -349,7 +349,7 @@ const Jobpost = ({navigation}: {navigation: any}) => {
                     alignSelf: 'center',
                     color: 'red',
                     fontSize: 13,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                   }}>
                   {err}
                 </Text>

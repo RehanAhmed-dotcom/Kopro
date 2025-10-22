@@ -158,14 +158,16 @@ const Addimage = ({navigation}) => {
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
+                // flexWrap:"wrap",
                 alignItems: 'center',
-                width: wp(80),
-                height: hp(20),
+                width: wp(90),
+                // height: hp(20),
                 // flex:1
               }}>
               <FlatList
-                horizontal
+                // horizontal
                 data={img}
+                numColumns={3}
                 showsHorizontalScrollIndicator={false}
                 renderItem={renderimg}
                 ListFooterComponent={
@@ -173,7 +175,7 @@ const Addimage = ({navigation}) => {
                     <TouchableOpacity
                       onPress={() => selectimg()}
                       style={{
-                        alignSelf: 'center',
+                        alignSelf:'flex-end',
                         alignItems: 'center',
                         alignContent: 'center',
 
@@ -197,7 +199,7 @@ const Addimage = ({navigation}) => {
                         style={{
                           // fontSize: 20,
                           color: 'white',
-                          fontFamily: 'MontserratAlternates-Semibold',
+                          fontFamily: 'Helvetica-Bold',
                         }}>
                         Upload image
                       </Text>
@@ -232,7 +234,7 @@ const Addimage = ({navigation}) => {
                   style={{
                     fontSize: 20,
                     color: 'white',
-                    fontFamily: 'MontserratAlternates-Semibold',
+                   
                   }}>
                   Upload image
                 </Text>
@@ -266,7 +268,7 @@ const Addimage = ({navigation}) => {
                   style={{
                     fontSize: 20,
                     color: 'white',
-                    fontFamily: 'MontserratAlternates-Semibold',
+                    fontFamily: 'Helvetica-Bold',
                   }}>
                   Upload image
                 </Text>
@@ -281,7 +283,7 @@ const Addimage = ({navigation}) => {
               alignSelf: 'center',
               color: 'red',
               fontSize: 13,
-              fontFamily: 'MontserratAlternates-SemiBold',
+              fontFamily: 'Helvetica-Bold',
             }}>
             {err}
           </Text>

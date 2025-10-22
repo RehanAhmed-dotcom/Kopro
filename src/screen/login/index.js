@@ -104,7 +104,7 @@ const Login = ({navigation}: {navigation: any}) => {
                   alignSelf: 'center',
                   color: 'red',
                   fontSize: 13,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                 }}>
                 {err}
               </Text>

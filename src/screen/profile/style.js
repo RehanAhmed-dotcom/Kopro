@@ -21,7 +21,7 @@ export default StyleSheet.create({
     marginBottom: wp(4),
     color: Colors.white,
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     bottom: wp(12),
   },
   top: {
@@ -33,7 +33,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
   },
@@ -89,7 +89,7 @@ export default StyleSheet.create({
   },
   login: {
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: Colors.main_back_color,
     fontWeight: '600',
     letterSpacing: 1,

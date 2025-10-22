@@ -24,7 +24,7 @@ export default StyleSheet.create({
     width: wp(90),
     fontSize: 14,
     color: 'white',
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
 
   top: {
@@ -38,7 +38,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
 
     color: Colors.white,
@@ -103,7 +103,7 @@ export default StyleSheet.create({
   },
   cover: {
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
     position: 'absolute',
@@ -127,14 +127,14 @@ export default StyleSheet.create({
   },
   mem: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.main_back_color,
     width: wp(50),
   },
   mem1: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.main_back_color,
   },
@@ -156,13 +156,13 @@ export default StyleSheet.create({
   },
   detail_title: {
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.main_back_color,
   },
   detail_text: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     letterSpacing: 1,
     color: 'grey',
     marginTop: wp(2),

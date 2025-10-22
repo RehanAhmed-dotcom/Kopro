@@ -24,7 +24,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
 
     color: Colors.white,
@@ -118,25 +118,25 @@ export default StyleSheet.create({
     left: wp(16),
     color: Colors.white,
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
   },
   part: {
     color: 'grey',
     marginVertical: wp(5),
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
   pname: {
     color: 'white',
     fontSize: 16,
     letterSpacing: 1,
     lineHeight: wp(7),
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
   pmesg: {
     color: 'white',
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
 });

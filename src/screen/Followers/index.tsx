@@ -129,7 +129,7 @@ const Followers = ({ navigation, route }: { navigation: any; route: any }) => {
         <Text
           style={{
             fontSize: 16,
-            fontFamily: 'MontserratAlternates-SemiBold',
+            fontFamily: 'Helvetica-Bold',
             letterSpacing: 1,
             color: Colors.white,
           }}
@@ -163,7 +163,7 @@ const Followers = ({ navigation, route }: { navigation: any; route: any }) => {
               style={{
                 fontSize: 20,
                 color: 'white',
-                fontFamily: 'MontserratAlternates-Semibold',
+                fontFamily: 'Helvetica-Bold',
               }}
             >
               {name}

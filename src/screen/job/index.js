@@ -346,7 +346,7 @@ const Job = ({navigation}: {navigation: any}) => {
           </View>
           <Text
             style={{
-              fontFamily: 'MontserratAlternates-Regular',
+              fontFamily: 'Helvetica',
               color: 'white',
             }}>
             {' '}
@@ -372,7 +372,7 @@ const Job = ({navigation}: {navigation: any}) => {
           </View>
           <Text
             style={{
-              fontFamily: 'MontserratAlternates-Regular',
+              fontFamily: 'Helvetica',
               color: 'white',
             }}>
             {' '}
@@ -408,7 +408,7 @@ const Job = ({navigation}: {navigation: any}) => {
           </View>
           <Text
             style={{
-              fontFamily: 'MontserratAlternates-Regular',
+              fontFamily: 'Helvetica',
               color: 'white',
             }}>
             {' '}
@@ -532,7 +532,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.main_back_color,
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                   letterSpacing: 1,
                   marginTop: wp(2),
                 }}>
@@ -542,7 +542,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.white,
                   fontSize: 12,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   marginTop: wp(2),
                   paddingLeft: wp(4),
                 }}>
@@ -552,7 +552,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.main_back_color,
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                   letterSpacing: 1,
                   marginTop: wp(3),
                 }}>
@@ -562,7 +562,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.white,
                   fontSize: 12,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   marginTop: wp(2),
                   paddingLeft: wp(4),
                 }}>
@@ -573,7 +573,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.main_back_color,
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                   letterSpacing: 1,
                   marginTop: wp(3),
                 }}>
@@ -583,7 +583,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.white,
                   fontSize: 12,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   marginTop: wp(2),
                   paddingLeft: wp(4),
                 }}>
@@ -593,7 +593,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.main_back_color,
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                   letterSpacing: 1,
                   marginTop: wp(3),
                 }}>
@@ -603,7 +603,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.white,
                   fontSize: 12,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   marginTop: wp(2),
                   paddingLeft: wp(4),
                 }}>
@@ -620,7 +620,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     style={{
                       color: Colors.main_back_color,
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-SemiBold',
+                      fontFamily: 'Helvetica-Bold',
                       letterSpacing: 1,
                       marginTop: wp(3),
                     }}>
@@ -630,7 +630,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     style={{
                       color: Colors.white,
                       fontSize: 12,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       marginTop: wp(2),
                       paddingLeft: wp(4),
                     }}>
@@ -654,7 +654,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.main_back_color,
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                   letterSpacing: 1,
                   marginTop: wp(3),
                 }}>
@@ -664,7 +664,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: Colors.white,
                   fontSize: 12,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   marginTop: wp(2),
                   paddingLeft: wp(4),
                 }}>
@@ -722,7 +722,7 @@ const Job = ({navigation}: {navigation: any}) => {
                 style={{
                   color: 'white',
                   fontSize: 13,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                 }}>
                 Create New Job
               </Text> */}
@@ -814,7 +814,7 @@ const Job = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(2),
                   }}>
@@ -846,7 +846,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -857,7 +857,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,
@@ -895,7 +895,7 @@ const Job = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(6),
                   }}>
@@ -927,7 +927,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -938,7 +938,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,
@@ -976,7 +976,7 @@ const Job = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(6),
                   }}>
@@ -1008,7 +1008,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -1019,7 +1019,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,
@@ -1057,7 +1057,7 @@ const Job = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(6),
                     alignSelf: 'flex-start',
@@ -1090,7 +1090,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -1101,7 +1101,7 @@ const Job = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,

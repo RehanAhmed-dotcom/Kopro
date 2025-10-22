@@ -15,7 +15,7 @@ const Box = ({lab, wid, place, val, onchg, type, autoCapitalize, labplace}) => {
         <Text
           style={{
             fontSize: 16,
-            fontFamily: 'MontserratAlternates-Semibold',
+            fontFamily: 'Helvetica-Bold',
             color: 'white',
           }}>
           {lab}
@@ -74,7 +74,7 @@ const Box = ({lab, wid, place, val, onchg, type, autoCapitalize, labplace}) => {
           roundness: 8,
           fonts: {
             regular: {
-              fontFamily: 'MontserratAlternates-Regular',
+              fontFamily: 'Helvetica',
             },
           },
         }}

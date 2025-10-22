@@ -257,7 +257,7 @@ const Groups = ({navigation}: {navigation: any}) => {
           <Text
             style={{
               fontSize: 12,
-              fontFamily: 'MontserratAlternates-SemiBold',
+              fontFamily: 'Helvetica-Bold',
               letterSpacing: 1,
               color: Colors.white,
             }}>
@@ -401,7 +401,7 @@ const Groups = ({navigation}: {navigation: any}) => {
                   alignSelf: 'center',
                   color: 'red',
                   fontSize: 13,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                 }}>
                 {err}
               </Text>
@@ -491,7 +491,7 @@ const Groups = ({navigation}: {navigation: any}) => {
                           <Text
                             style={{
                               fontSize: 12,
-                              fontFamily: 'MontserratAlternates-SemiBold',
+                              fontFamily: 'Helvetica-Bold',
                               letterSpacing: 1,
                               color: Colors.white,
                             }}>
@@ -517,7 +517,7 @@ const Groups = ({navigation}: {navigation: any}) => {
                             <Text
                               style={{
                                 fontSize: 12,
-                                fontFamily: 'MontserratAlternates-SemiBold',
+                                fontFamily: 'Helvetica-Bold',
                                 letterSpacing: 1,
                                 color: Colors.white,
                               }}>

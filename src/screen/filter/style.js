@@ -39,7 +39,7 @@ export default StyleSheet.create({
   },
   home: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
 
     color: Colors.white,
@@ -52,7 +52,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-Medium',
+    fontFamily: 'Helvetica-Bold',
     color: 'white',
     lineHeight: hp(3),
     marginBottom: hp(2.5),
@@ -87,7 +87,7 @@ export default StyleSheet.create({
   radiotitle: {
     color: Colors.white,
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
   main: {
     flexDirection: 'row',
@@ -108,7 +108,7 @@ export default StyleSheet.create({
     width: wp(90),
     fontSize: 14,
     color: 'white',
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   chaticon: {
     width: wp(6),
@@ -130,6 +130,6 @@ export default StyleSheet.create({
 
     letterSpacing: 1,
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
 });

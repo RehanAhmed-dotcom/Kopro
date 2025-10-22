@@ -340,7 +340,7 @@ const Ins = ({navigation}: {navigation: any}) => {
         style={{
           fontSize: 16,
           marginTop: hp(1),
-          fontFamily: 'MontserratAlternates-SemiBold',
+          fontFamily: 'Helvetica-Bold',
           color: Colors.white,
         }}>
         {item.name}

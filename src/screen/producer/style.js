@@ -40,7 +40,7 @@ export default StyleSheet.create({
     marginBottom: wp(4),
     color: Colors.white,
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     bottom: wp(12),
     right: wp(4),
     width: wp(70),
@@ -110,7 +110,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     fontWeight: 'bold',
     color: Colors.white,
@@ -152,7 +152,7 @@ export default StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: Colors.white,
   },
 
@@ -179,12 +179,12 @@ export default StyleSheet.create({
     fontWeight: '600',
     // letterSpacing: 1,
     fontSize: 12.5,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
   name: {
     color: 'white',
     fontSize: 22,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     textAlign: 'center',
   },
@@ -192,7 +192,7 @@ export default StyleSheet.create({
     color: 'white',
     fontSize: 14,
     marginHorizontal:10,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     letterSpacing: 1,
   },
   statsContainer: {
@@ -227,7 +227,7 @@ export default StyleSheet.create({
   statLabel: {
     color: 'white',
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     letterSpacing: 1,
   },
   image: {

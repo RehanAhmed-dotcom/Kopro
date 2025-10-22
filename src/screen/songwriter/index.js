@@ -82,7 +82,7 @@ const Songwriter = ({navigation}: {navigation: any}) => {
                 style={{
                   color: 'white',
                   fontSize: 12,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   letterSpacing: 1,
                   marginVertical: wp(3),
                 }}>

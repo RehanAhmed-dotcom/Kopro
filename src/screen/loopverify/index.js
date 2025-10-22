@@ -112,7 +112,7 @@ const Loopverify = ({navigation, route}: {navigation: any}) => {
                   alignSelf: 'center',
                   color: 'red',
                   fontSize: 13,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                 }}>
                 {err}
               </Text>

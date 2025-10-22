@@ -53,7 +53,7 @@ export default StyleSheet.create({
   },
   home: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
 
     color: Colors.white,
@@ -84,7 +84,7 @@ export default StyleSheet.create({
   },
   name: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: Colors.main_back_color,
   },
   num: {
@@ -94,19 +94,19 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     textAlign: 'center',
 
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     justifyContent: 'center',
     color: Colors.main_back_color,
   },
   tim: {
     color: 'grey',
     fontSize: 10,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   mesg: {
     color: Colors.white,
     width: wp(37),
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
 });

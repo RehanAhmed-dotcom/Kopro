@@ -103,7 +103,7 @@ const Password = ({navigation, route}: {navigation: any}) => {
               <Text
                 style={[
                   styles.text,
-                  {fontSize: 20, fontFamily: 'MontserratAlternates-Medium'},
+                  {fontSize: 20, fontFamily: 'Helvetica-Bold'},
                 ]}>
                 Verification
               </Text>
@@ -133,7 +133,7 @@ const Password = ({navigation, route}: {navigation: any}) => {
                   alignSelf: 'center',
                   color: 'red',
                   fontSize: 13,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                 }}>
                 {err}
               </Text>

@@ -51,7 +51,7 @@ const Friends = ({navigation}) => {
             },
             tabBarLabelStyle: {
               fontSize: 12,
-              fontFamily: 'MontserratAlternates-Medium',
+              fontFamily: 'Helvetica-Bold',
             },
             tabBarActiveTintColor: 'white',
             tabBarInactiveTintColor: 'gray',
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     fontWeight: 'bold',
     color: Colors.white,

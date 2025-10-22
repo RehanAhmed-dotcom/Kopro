@@ -50,7 +50,7 @@ export default StyleSheet.create({
   },
   home: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     fontWeight: 'bold',
     color: Colors.white,
@@ -86,23 +86,23 @@ export default StyleSheet.create({
   },
   name: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
   tim: {
     color: 'grey',
     fontSize: 10,
-    fontFamily: 'MontserratAlternates-Medium',
+    fontFamily: 'Helvetica-Bold',
   },
   comment: {
     color: 'grey',
     width: wp(37),
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Medium',
+    fontFamily: 'Helvetica-Bold',
   },
   msg: {
     width: wp(60),
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'grey',
     flexWrap: 'nowrap',
   },
@@ -111,6 +111,6 @@ export default StyleSheet.create({
     width: wp(37),
     fontSize: 14,
 
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
 });

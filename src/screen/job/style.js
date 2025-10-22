@@ -29,14 +29,14 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
   },
 
   post: {
     fontSize: 13,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     // letterSpacing: 1,
     color: Colors.white,
   },
@@ -76,7 +76,7 @@ export default StyleSheet.create({
   },
   login: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: Colors.main_back_color,
     letterSpacing: 1,
   },
@@ -102,19 +102,19 @@ export default StyleSheet.create({
   },
   titleList: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: Colors.white,
     letterSpacing: 2,
   },
   listtag: {
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'lightblue',
     marginBottom: hp(0.1),
   },
   listdet: {
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'white',
   },
   listBl: {
@@ -167,11 +167,11 @@ export default StyleSheet.create({
     width: wp(65),
     fontSize: 14,
     color: 'white',
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   btntext: {
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'white',
   },
   modal: {
@@ -217,13 +217,13 @@ export default StyleSheet.create({
   },
   modalbtntext: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'white',
   },
   radiotitle: {
     color: Colors.white,
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   main: {
     flexDirection: 'row',

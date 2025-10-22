@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     fontWeight: 'bold',
     color: Colors.white,
@@ -160,13 +160,13 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
   },
   text1: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     letterSpacing: 1,
     color: 'grey',
   },

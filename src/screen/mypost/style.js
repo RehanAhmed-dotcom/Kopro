@@ -26,14 +26,14 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
   },
 
   post: {
     fontSize: 10,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     letterSpacing: 1,
     color: Colors.white,
   },
@@ -70,7 +70,7 @@ export default StyleSheet.create({
   },
   login: {
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: Colors.main_back_color,
     letterSpacing: 1,
   },
@@ -92,25 +92,25 @@ export default StyleSheet.create({
   },
   titleList: {
     fontSize: 15,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: Colors.white,
     letterSpacing: 2,
     width: wp(45),
   },
   appli: {
     fontSize: 10,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: Colors.white,
   },
   listtag: {
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'lightblue',
     marginBottom: hp(0.1),
   },
   listdet: {
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'white',
   },
   listBl: {

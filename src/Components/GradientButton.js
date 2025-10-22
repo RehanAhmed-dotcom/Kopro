@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight:'800',
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
 });
 

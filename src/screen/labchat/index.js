@@ -222,7 +222,7 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
             <Text
               style={{
                 fontSize: 14,
-                fontFamily: 'MontserratAlternates-Regular',
+                fontFamily: 'Helvetica',
                 color: 'white',
               }}>
               {item.msg}
@@ -231,7 +231,7 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
             style={{
               alignSelf: 'flex-end',
               fontSize: 10,
-              fontFamily: 'MontserratAlternates-Regular',
+              fontFamily: 'Helvetica',
               color: 'white',
             }}>
             {moment(item.date).format('hh:mm A')}
@@ -285,7 +285,7 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
               <Text
                 style={{
                   fontSize: 16,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                   color: 'white',
 
                   letterSpacing: 1,
@@ -302,7 +302,7 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
                     style={{
                       color: 'white',
                       fontSize: 10,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       bottom: 3,
                     }}
                     numberOfLines={1}
@@ -316,7 +316,7 @@ const Msg = ({navigation, route}: {navigation: any, route: any}) => {
                 style={{
                   color: 'white',
                   fontSize: 10,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   bottom: 3,
                 }}>
                 

@@ -37,7 +37,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
     marginLeft: hp(0.7),
@@ -59,7 +59,7 @@ export default StyleSheet.create({
   },
   home: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     fontWeight: 'bold',
     color: Colors.white,
@@ -84,7 +84,7 @@ export default StyleSheet.create({
   name: {
     color: Colors.main_back_color,
     fontSize: 25,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     textAlign: 'center',
     marginBottom: hp(1),
@@ -94,7 +94,7 @@ export default StyleSheet.create({
     fontSize: 14,
     alignSelf:'center',
     right:3,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     marginBottom:4,
   },
   icn: {
@@ -242,7 +242,7 @@ export default StyleSheet.create({
     color: '#999',
     fontSize: 15,
     textAlign:"center",
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     lineHeight: 22,
   },
   actionButtons: {

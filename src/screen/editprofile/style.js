@@ -47,7 +47,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
 
     color: Colors.white,
@@ -99,7 +99,7 @@ export default StyleSheet.create({
 
     letterSpacing: 1,
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
   radiobtn: {
     width: wp(3),
@@ -108,7 +108,7 @@ export default StyleSheet.create({
   radiotitle: {
     color: Colors.white,
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   main: {
     flexDirection: 'row',

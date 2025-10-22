@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 0,
         right: 0,
-        fontFamily: 'MontserratAlternates-Semibold',
+        fontFamily: 'Helvetica-Bold',
         textAlign: 'center',
         fontSize: 20,
         color:"white",

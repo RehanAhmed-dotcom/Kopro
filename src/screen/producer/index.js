@@ -147,7 +147,7 @@ const Producer = ({navigation}) => {
         style={{
           color: 'white',
           fontSize: 14,
-          fontFamily: 'MontserratAlternates-Regular',
+          fontFamily: 'Helvetica',
         }}>
         {item?.firstname}
       </Text>

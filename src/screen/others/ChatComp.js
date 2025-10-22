@@ -327,7 +327,7 @@ const ChatComp = props => {
                 <Text
                   style={{
                     fontSize: 12,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     color: show ? 'white' : Colors.main_back_color,
                   }}>
@@ -357,7 +357,7 @@ const ChatComp = props => {
                 <Text
                   style={{
                     fontSize: 12,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     color: show ? 'white' : Colors.main_back_color,
                   }}>

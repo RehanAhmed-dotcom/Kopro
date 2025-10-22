@@ -51,12 +51,12 @@ export default StyleSheet.create({
   },
   msg: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   tim: {
     alignSelf: 'flex-end',
     fontSize: 10,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   input: {
     height: wp(12),
@@ -64,7 +64,7 @@ export default StyleSheet.create({
     padding: 10,
     fontSize: 14,
 
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     backgroundColor: '#1F1F1F',
     borderRadius: 10,
     paddingLeft: wp(3),

@@ -116,7 +116,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
     //     style={{
     //       color: 'white',
     //       fontSize: 14,
-    //       fontFamily: 'MontserratAlternates-Regular',
+    //       fontFamily: 'Helvetica',
     //     }}>
     //     {item.firstname}
     //   </Text>
@@ -297,7 +297,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                 color: 'grey',
                 fontSize: 14,
                 marginLeft: 15,
-                fontFamily: 'MontserratAlternates-Regular',
+                fontFamily: 'Helvetica',
                 letterSpacing: 1,
                 // marginVertical: wp(3),
                 // color: 'white',
@@ -427,7 +427,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                   <Text
                     style={{
                       fontSize: 16,
-                      fontFamily: 'MontserratAlternates-SemiBold',
+                      fontFamily: 'Helvetica-Bold',
                       color: Colors.white,
                     }}>
                     Friends {''}
@@ -459,7 +459,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                 marginBottom: 10,
                 color: 'white',
                 fontSize: 16,
-                fontFamily: 'MontserratAlternates-SemiBold',
+                fontFamily: 'Helvetica-Bold',
               }}>
               Skills
             </Text>
@@ -498,7 +498,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                 marginTop: 20,
                 color: 'white',
                 fontSize: 16,
-                fontFamily: 'MontserratAlternates-SemiBold',
+                fontFamily: 'Helvetica-Bold',
               }}>
               Gallary
             </Text>
@@ -521,7 +521,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                 {/* <Text
                   style={{
                     fontSize: 16,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     color: Colors.main_back_color,
                   }}>
                   Options
@@ -548,7 +548,7 @@ const Producerdetail = ({navigation, route}: {navigation: any, route: any}) => {
                     <Text
                       style={{
                         fontSize: 30,
-                        fontFamily: 'MontserratAlternates-SemiBold',
+                        fontFamily: 'Helvetica-Bold',
                         color: cros == 1 ? Colors.main_back_color : 'grey',
                       }}>
                       X

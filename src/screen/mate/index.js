@@ -153,7 +153,7 @@ const Mate = ({navigation, route}: {navigation: any, route: any}) => {
           <Text
             style={{
               fontSize: 12,
-              fontFamily: 'MontserratAlternates-SemiBold',
+              fontFamily: 'Helvetica-Bold',
               letterSpacing: 1,
               color: Colors.white,
             }}>
@@ -472,13 +472,13 @@ const Mate = ({navigation, route}: {navigation: any, route: any}) => {
                   // bottom: 5,
                   color: 'white',
                   fontSize: 10,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                 }}>
                 <Text
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 12,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                   }}>
                   Created By
                 </Text>
@@ -510,7 +510,7 @@ const Mate = ({navigation, route}: {navigation: any, route: any}) => {
                     style={{
                       color: Colors.white,
                       fontSize: 10,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       letterSpacing: 1,
                     }}>
                     Add Members
@@ -536,7 +536,7 @@ const Mate = ({navigation, route}: {navigation: any, route: any}) => {
                     color: Colors.white,
                     marginTop: wp(3),
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                   }}>
                     
                     Hide Extra member
@@ -549,7 +549,7 @@ const Mate = ({navigation, route}: {navigation: any, route: any}) => {
                       color: Colors.white,
                       marginTop: wp(3),
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-SemiBold',
+                      fontFamily: 'Helvetica-Bold',
                     }}>
                       
                       And {groupMember.length - 2} others members
@@ -595,7 +595,7 @@ style={{
   setuserModal(false);
 }}>
 <Text style={{fontSize: 12,
-fontFamily: 'MontserratAlternates-SemiBold',
+fontFamily: 'Helvetica-Bold',
 letterSpacing: 1,
 color: Colors.white,}}>Add</Text>
 </TouchableOpacity> */}
@@ -644,7 +644,7 @@ color: Colors.white,}}>Add</Text>
                       <Text
                         style={{
                           fontSize: 12,
-                          fontFamily: 'MontserratAlternates-SemiBold',
+                          fontFamily: 'Helvetica-Bold',
                           letterSpacing: 1,
                           color: Colors.white,
                         }}>
@@ -671,7 +671,7 @@ color: Colors.white,}}>Add</Text>
                         <Text
                           style={{
                             fontSize: 12,
-                            fontFamily: 'MontserratAlternates-SemiBold',
+                            fontFamily: 'Helvetica-Bold',
                             letterSpacing: 1,
                             color: Colors.white,
                           }}>

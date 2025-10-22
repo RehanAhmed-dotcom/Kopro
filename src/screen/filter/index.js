@@ -300,7 +300,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     bottom: hp(-5),
                   }}>
@@ -318,7 +318,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(2),
                   }}>
@@ -351,7 +351,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -362,7 +362,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,
@@ -398,7 +398,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(3),
                   }}>
@@ -431,7 +431,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -442,7 +442,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,
@@ -478,7 +478,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(3),
                   }}>
@@ -511,7 +511,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -522,7 +522,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,
@@ -614,7 +614,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(2),
                   }}>
@@ -647,7 +647,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 20, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -658,7 +658,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,
@@ -694,7 +694,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                   style={{
                     color: Colors.main_back_color,
                     fontSize: 14,
-                    fontFamily: 'MontserratAlternates-SemiBold',
+                    fontFamily: 'Helvetica-Bold',
                     letterSpacing: 1,
                     marginTop: wp(4),
                   }}>
@@ -729,7 +729,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     listItemLabelStyle={{height: 25, color: 'white'}}
                     textStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                       color: 'white',
                     }}
                     tickIconStyle={{
@@ -740,7 +740,7 @@ const Genre = ({navigation}: {navigation: any}) => {
                     }}
                     labelStyle={{
                       fontSize: 14,
-                      fontFamily: 'MontserratAlternates-Regular',
+                      fontFamily: 'Helvetica',
                     }}
                     disabledStyle={{
                       opacity: 1,

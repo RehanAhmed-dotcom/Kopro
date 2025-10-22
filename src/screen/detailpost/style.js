@@ -16,18 +16,18 @@ export default StyleSheet.create({
   },
   titleText: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: 'white',
   },
   listtag: {
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'lightblue',
     marginBottom: hp(0.1),
   },
   listdet: {
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'white',
   },
   listBl: {
@@ -45,7 +45,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
   },
@@ -54,7 +54,7 @@ export default StyleSheet.create({
   },
   post: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Medium',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
   },
@@ -96,7 +96,7 @@ export default StyleSheet.create({
   },
   btntext: {
     fontSize: 12,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'white',
   },
   icon: {
@@ -105,12 +105,12 @@ export default StyleSheet.create({
   },
   name: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-Medium',
+    fontFamily: 'Helvetica-Bold',
     color: 'white',
   },
   mesg: {
     fontSize: 10,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'white',
     width: wp(45),
   },

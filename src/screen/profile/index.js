@@ -231,7 +231,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                       {fontSize: 14, color: 'grey'},
                     ]}>
                     {/* {userData?.interest.toString()} */}
-                    Connect, create and grow in the world of music.
+                    Connect and create
                   </Text>
 
                   <View style={styles.form}>
@@ -293,7 +293,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                         marginTop: wp(8),
                         top: 6,
                         fontSize: 16,
-                        fontFamily: 'MontserratAlternates-SemiBold',
+                        fontFamily: 'Helvetica-Bold',
                       }}>
                       Add Social Links
                     </Text>
@@ -438,7 +438,7 @@ const Profile = ({navigation, route}: {navigation: any}) => {
                   alignSelf: 'center',
                   color: 'red',
                   fontSize: 13,
-                  fontFamily: 'MontserratAlternates-SemiBold',
+                  fontFamily: 'Helvetica-Bold',
                 }}>
                 {err}
               </Text>

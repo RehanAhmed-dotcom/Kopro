@@ -52,7 +52,7 @@ export default function App({navigation}) {
   const {userData} = useSelector(({USER}) => USER);
   const {isLoggedIn} = useSelector(({USER}) => USER);
 
-  console.log('::::data', userData);
+  // console.log('::::data', userData);
 
   return (
     <NavigationContainer ref={navigationRef}>

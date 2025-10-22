@@ -275,7 +275,7 @@ const Signup = ({navigation}: {navigation: any}) => {
                 listItemLabelStyle={{height: 25, color: 'white'}}
                 textStyle={{
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   color: 'white',
                 }}
                 tickIconStyle={{
@@ -286,7 +286,7 @@ const Signup = ({navigation}: {navigation: any}) => {
                 }}
                 labelStyle={{
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                 }}
                 disabledStyle={{
                   opacity: 1,
@@ -336,7 +336,7 @@ const Signup = ({navigation}: {navigation: any}) => {
                 listItemLabelStyle={{height: 20, color: 'white'}}
                 textStyle={{
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                   color: 'white',
                 }}
                 tickIconStyle={{
@@ -347,7 +347,7 @@ const Signup = ({navigation}: {navigation: any}) => {
                 }}
                 labelStyle={{
                   fontSize: 14,
-                  fontFamily: 'MontserratAlternates-Regular',
+                  fontFamily: 'Helvetica',
                 }}
                 disabledStyle={{
                   opacity: 1,
@@ -384,7 +384,7 @@ const Signup = ({navigation}: {navigation: any}) => {
                 alignSelf: 'center',
                 color: 'red',
                 fontSize: 13,
-                fontFamily: 'MontserratAlternates-SemiBold',
+                fontFamily: 'Helvetica-Bold',
                 marginTop: wp(10),
               }}>
               {err}

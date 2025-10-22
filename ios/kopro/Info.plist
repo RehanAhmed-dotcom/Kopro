@@ -74,9 +74,9 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
-		<string>MontserratAlternates-Medium.otf</string>
-		<string>MontserratAlternates-Regular.otf</string>
-		<string>MontserratAlternates-SemiBold.otf</string>
+		<string>Helvetica-Bold.otf</string>
+		<string>Helvetica.otf</string>
+		<string>Helvetica-Bold.otf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

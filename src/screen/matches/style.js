@@ -42,7 +42,7 @@ export default StyleSheet.create({
   },
   home: {
     fontSize: 20,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
 
     color: Colors.white,
@@ -54,7 +54,7 @@ export default StyleSheet.create({
   // },
   titletext: {
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     color: Colors.main_back_color,
     fontWeight: 'bold',
     letterSpacing: 1,
@@ -81,13 +81,13 @@ export default StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     letterSpacing: 1,
     color: Colors.white,
   },
   text1: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     letterSpacing: 1,
     color: 'grey',
   },
@@ -104,7 +104,7 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'white',
     lineHeight: hp(3),
     marginBottom: hp(3),
@@ -140,7 +140,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 1,
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
     opacity: 1,
   },
   viewimg: {

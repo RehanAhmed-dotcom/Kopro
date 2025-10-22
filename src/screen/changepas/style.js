@@ -29,7 +29,7 @@ export default StyleSheet.create({
   title: {
  
     fontSize: 20,
-    fontFamily:'MontserratAlternates-SemiBold',
+    fontFamily:'Helvetica-Bold',
     letterSpacing: 1,
  
     color: Colors.white,
@@ -89,7 +89,7 @@ export default StyleSheet.create({
   login: {
    
     fontSize: 18,
-    fontFamily:'MontserratAlternates-SemiBold',
+    fontFamily:'Helvetica-Bold',
     color: Colors.main_back_color,
    
     letterSpacing: 1,

@@ -332,7 +332,7 @@ const Talent = ({navigation}: {navigation: any}) => {
       <Text
         style={{
           fontSize: 16,
-          fontFamily: 'MontserratAlternates-SemiBold',
+          fontFamily: 'Helvetica-Bold',
           color: Colors.white,
         }}>
         {item.name}

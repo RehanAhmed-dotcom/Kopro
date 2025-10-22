@@ -58,20 +58,20 @@ export default StyleSheet.create({
   },
   msg: {
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     color: 'black',
   },
   tim: {
     alignSelf: 'flex-end',
     fontSize: 10,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   input: {
     height: wp(12),
     borderWidth: 1,
     padding: 10,
     fontSize: 14,
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
     backgroundColor: '#1F1F1F',
     borderRadius: 20,
     paddingLeft: wp(3),

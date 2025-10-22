@@ -102,7 +102,7 @@ const Own = ({navigation}: {navigation: any}) => {
               style={{
                 marginVertical: 10,
                 color: 'white',
-                fontFamily: 'MontserratAlternates-Medium',
+                fontFamily: 'Helvetica-Bold',
               }}>
               Group Type: {item.groupType}
             </Text>

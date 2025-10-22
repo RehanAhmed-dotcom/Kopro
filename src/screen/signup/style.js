@@ -63,7 +63,7 @@ export default StyleSheet.create({
     color: Colors.white,
     alignSelf: 'center',
     marginVertical: hp(1.5),
-    fontFamily: 'MontserratAlternates-Regular',
+    fontFamily: 'Helvetica',
   },
   container: {
     marginTop: hp(6),
@@ -88,6 +88,6 @@ export default StyleSheet.create({
     letterSpacing: 1,
 
     fontSize: 18,
-    fontFamily: 'MontserratAlternates-SemiBold',
+    fontFamily: 'Helvetica-Bold',
   },
 });
